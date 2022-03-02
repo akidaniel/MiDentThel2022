@@ -806,7 +806,7 @@ p.p3 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 110%; font: 14.0px;}
 
 ul.ul1 {list-style-type: disc}
 	
-.wrapper {display:flex; flex-wrap: wrap; margin-left: -10px; margin-top: -10px;}
+.wrapper {display:flex; flex-wrap: wrap; margin: 10px -10px -20px}
 .column {flex-basis: 0; flex-grow: 1; padding: 10px; margin: 10px 0 0 10px;}
 .texto-corporativo {max-width: 1300px; margin: 0 auto 4rem!important;}
 .column h2 {font-weight:bold; font-size:1.75em;}		
@@ -819,11 +819,16 @@ ul.ul1 {list-style-type: disc}
 	
 .ventaja img {margin:0 auto;}
 	.ventaja a {color:#000000;}
-
+	.cabeceracorporativa {display: flex;
+        align-items: center;
+    justify-content: center; line-height: 95%;     border-bottom: 2px solid #1DCDCA;}
+.cabeceracorporativa div img {width: 250px; height: 80%; margin: -30px 30px 0 0;}
 	@media (max-width: 568px) {
 .column {flex-basis:auto; margin: 0px 30px;}
 .subtitulo {font-size:24px;}
-.column h2 {line-height:120%; font-size:24px;}		
+.column h2 {line-height:120%; font-size:24px;}
+.cabeceracorporativa {display: block;}
+.cabeceracorporativa div img {display:none}		
 		}
 	</style>
 	<!-- Fonts Plugin CSS -->
@@ -1077,9 +1082,8 @@ ul.ul1 {list-style-type: disc}
         
         
 <section class="storefront-product-section storefront-best-selling-products texto-corporativo">
-
-<h2 class="section-title" style="line-height: 95%;     border-bottom: 2px solid #1DCDCA;
-    padding-bottom: 20px;">Dent-thel Depósito Dental<br><span class="subtitulo">Tienda online de productos dentales</span></h2>
+<div class="cabeceracorporativa"><div><img width="292" height="110" src="imagenes/cropped-cropped-logo.png" class="custom-logo" alt="dent-thel.com Depósito dental"></div><div>
+<h2 class="section-title" style="line-height: 100%;"> Dent-thel Depósito Dental<br><span class="subtitulo">Tienda online de productos dentales</span></h2></div></div>
 <div class="wrapper">
 <div class="column">
 <h2>Gran selección de productos dentales para el trabajo en el sector dental de Clínicas y Laboratorios</h2>
@@ -1101,9 +1105,9 @@ Nuestro consejo: aproveche el <b>envío gratuito</b> a partir de 100 euros.</spa
 <ul class="ventafiable">
 <li class="ventaja"><img src="imagenes/ICONO_GRATIS.jpg">Envíos gratis por compras a partir de 100€</li>
 <li class="ventaja"><img src="imagenes/ICONO_MINIMO.jpg">Compras sin valor minimo exigible</li>
-<li class="ventaja"><img src="imagenes/ICONO_ENTREGA.jpg">Rápida entrega</li>
+<li class="ventaja"><img src="imagenes/ICONO_ENTREGA.jpg">Entrega Rápida</li>
 <li class="ventaja"><img src="imagenes/ICONO_HISTORIAL.jpg">Historial de pedidos</li>
-<li class="ventaja"><a href="https://dent-thel.com/productos-dentales/outlet/"><img src="imagenes/ICONO_OUTLET.jpg">Productos Outlet</a></li>
+<li class="ventaja"><a href="https://dent-thel.com/productos-dentales/outlet/"><img src="imagenes/ICONO_OUTLET.jpg">Artículos Outlet</a></li>
 <li class="ventaja"><a href="https://dent-thel.com/ofertas/"><img src="imagenes/ICONO_FOLLETO.jpg">Publicaciones de ofertas</a></li>
 
 </ul>
@@ -1111,7 +1115,7 @@ Nuestro consejo: aproveche el <b>envío gratuito</b> a partir de 100 euros.</spa
 
 <div class="column">
 <h2>Ordene suministros dentales de alta calidad en línea</h2>
-<p class="p3"><span class="s1">Nuestra Tienda On Line incluye todas las áreas de la odontología: </span>
+<p class="p3"><span class="s1">Nuestra tienda online incluye todas las áreas de la odontología: </span>
 <a href="https://dent-thel.com/productos-dentales/laboratorio/siliconas-y-material-impresion/"><span>material de impresión</span></a>, 
 <a href="https://dent-thel.com/productos-dentales/laboratorio/instrumental/"><span>instrumental</span></a>, 
 <a href="https://dent-thel.com/productos-dentales/clinica/profilaxis-y-prevencion/"><span>profilaxis</span></a>, 
