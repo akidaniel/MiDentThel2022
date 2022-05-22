@@ -1308,7 +1308,12 @@ font-family: "Roboto";
 }
 	</style>
 	<!-- Fonts Plugin CSS -->
-	
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>	
 	
 <link href="http://fonts.cdnfonts.com/css/bigfat-script" rel="stylesheet"> 
 	
