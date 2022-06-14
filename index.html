@@ -1446,7 +1446,7 @@ filter: saturate(0) brightness(1);}
             
            
  <style>
-#formadiente {display:block;}
+#formadiente {display:flex;}
 #formaperla, #formadisco {display:none;}
 
 .mibotonera {display:flex;  justify-content: center; flex-wrap:wrap; flex-direction:row; margin: 0 2rem;}
@@ -1482,10 +1482,18 @@ filter: saturate(0) brightness(1);}
 
 .products h2:first-letter {text-transform: capitalize;}
 
+#formadientesmall {flex-direction:row;}
+#formadientesmall ul li {width: auto!important;
+    padding: 0!important;
+    margin: 0!important;
+    flex: 1 1 0; max-width: 8rem;}
+#formadientesmall ul li img {display:block; max-width:8rem;}
 
 @media screen and (max-width: 500px) {
 	
-.boton {margin-left:1rem; padding:13px; border-radius: 50px; border:1px solid #666666;}	}
+.boton {margin-left:1rem; padding:7px; border-radius: 30px; border:1px solid #666666; font-size: 0.75rem;}
+#formadientesmall ul li img {max-width:6rem; margin: 0 auto!important;}
+	}
 
  </style> 
  <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -1495,9 +1503,9 @@ filter: saturate(0) brightness(1);}
 $(document).ready(function() {
 
 var display = function(block_name) {
-  $('#formadiente, #formadisco, #formaperla').css('display', 'none');
-  $('#' + block_name).css('display', 'block');
-  $('.' + block_name).css('display', 'block');
+  $('#formadiente, #formadisco, #formaperla, #formadientesmall').css('display', 'none');
+  $('#' + block_name).css('display', 'flex');
+  $('.' + block_name).css('display', 'flex');
 
 
 }
@@ -1514,6 +1522,9 @@ $('.CT').on('click', function() {
   display('formadisco', $(this));
 });
 
+$('.FDS').on('click', function() {
+  display('formadientesmall', $(this));
+});
 
 
 });
@@ -1546,6 +1557,8 @@ $('.CT').on('click', function() {
 <a id="diente" href="#" class="boton UK">Forma de diente</a>
 <a id="perla" href="#" class="boton ES">Forma de perla</a>
 <a id="disco" href="#" class="boton CT">Forma de disco</a>
+<a id="dientepeke" href="#" class="boton FDS">Iconos pequeños</a>
+
 </div></div>    
 
 	<div id="content" class="site-content" tabindex="-1">
@@ -1875,6 +1888,111 @@ $('.CT').on('click', function() {
 		</a></li>
 </ul>
 </div>
+
+<div id="formadientesmall" class="columns-4"><ul class="products columns-4">
+<li class="product-category product first">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/articulacion/"><img src="./resources/ICONO_2022_PLAIN.jpg" alt="ARTICULACIÓN" width="324" height="324" srcset="resources/ICONO_LAB_2022_ARTICULACION.jpg 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ARTICULACION-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ARTICULACION-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ARTICULACION-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			ARTICULACIÓN		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/articuladores/"><img src="./resources/ICONO_ARTICULADORES.jpg" alt="ARTICULADORES" width="324" height="324" srcset="resources/ICONO_LAB_2022_ARTICULADORES.jpg 600w, resources/ICONO_LAB_2022_ARTICULADORES.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ARTICULADORES-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ARTICULADORES-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			ARTICULADORES		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/ataches-y-elementos-retentivos/"><img src="./resources/ICONO_ATACHES.jpg" alt="ATACHES Y ELEMENTOS RETENTIVOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_ATACHES.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ATACHES-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ATACHES-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ATACHES-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			ATACHES Y ELEMENTOS RETENTIVOS		</h2>
+		</a></li>
+<li class="product-category product last">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/cementos-laboratorio/"><img src="resources/ICONO_LAB_2022_CEMENTO.png" alt="CEMENTOS LABORATORIO" width="324" height="324" srcset="resources/ICONO_LAB_2022_CEMENTO.png 324w, resources/ICONO_LAB_2022_CEMENTO.png 300w, resources/ICONO_LAB_2022_CEMENTO.png 150w, resources/ICONO_LAB_2022_CEMENTO.png 32w, resources/ICONO_LAB_2022_CEMENTO.png 416w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_CEMENTOS_LAB-1-100x100.jpg 100w, resources/ICONO_LAB_2022_CEMENTO.png 600w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			CEMENTOS LABORATORIO		</h2>
+		</a></li>
+<li class="product-category product first">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/ceramica-y-accesorios/"><img src="./resources/ICONO_CERAMICA.jpg" alt="CERÁMICA Y ACCESORIOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_CERAMICA.jpg 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_CERAMICA-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_CERAMICA-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_CERAMICA-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px"><h2 class="woocommerce-loop-category__title">
+			CERÁMICA Y ACCESORIOS		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/ceras-y-accesorios/"><img src="./resources/ICONO_CERAS.jpg" alt="CERAS Y ACCESORIOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_CERA.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_CERAS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_CERAS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_CERAS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			CERAS Y ACCESORIOS		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/colado-y-soldaduras/"><img src="./resources/ICONO_COLADO.jpg" alt="COLADO Y SOLDADURAS" width="324" height="324" srcset="resources/ICONO_LAB_2022_COLADO.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_COLADO-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_COLADO-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_COLADO-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			COLADO Y SOLDADURAS		</h2>
+		</a></li>
+<li class="product-category product last">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/composites-laboratorio/"><img src="./resources/ICONO_COMPOSITES.jpg" alt="COMPOSITES LABORATORIO" width="324" height="324" srcset="resources/ICONO_LAB_2022_COMPOSITE.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_COMPOSITES-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_COMPOSITES-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_COMPOSITES-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			COMPOSITES LABORATORIO		</h2>
+		</a></li>
+<li class="product-category product first">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/desinfeccion-y-limpieza/"><img src="./resources/ICONO_DESINFECCION.jpg" alt="DESINFECCIÓN Y LIMPIEZA" width="324" height="324" srcset="resources/ICONO_LAB_2022_DESI.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DESINFECCION-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DESINFECCION-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DESINFECCION-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			DESINFECCIÓN Y LIMPIEZA		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/dientes-y-carillas-acrilicos/"><img src="./resources/ICONO_DIENTES.jpg" alt="DIENTES Y CARILLAS ACRÍLICOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_DIENTES.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DIENTES-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DIENTES-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DIENTES-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			DIENTES Y CARILLAS ACRÍLICOS		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/discos/"><img src="resources/ICONO_LAB_2022_DISCOS.jpg" alt="DISCOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_DISCOS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DISCOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DISCOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DISCOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			DISCOS		</h2>
+		</a></li>
+<li class="product-category product last">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/elementos-transporte/"><img src="./resources/ICONO_TRANSPORTE.jpg" alt="ELEMENTOS TRANSPORTE" width="324" height="324" srcset="resources/ICONO_LAB_2022_TPTE.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_TRANSPORTE-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_TRANSPORTE-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_TRANSPORTE-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			ELEMENTOS TRANSPORTE		</h2>
+		</a></li>
+<li class="product-category product first">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/esqueleticos/"><img src="./resources/ICONO_ESQUELETICOS.jpg" alt="ESQUELÉTICOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_ESQUE.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ESQUELETICOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ESQUELETICOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ESQUELETICOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			ESQUELÉTICOS		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-y-puntas-montadas/"><img src="./resources/ICONO_FRESAS_LAB.jpg" alt="FRESAS" width="324" height="324" srcset="resources/ICONO_LAB_2022_FRESAS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_FRESAS_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_FRESAS_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_FRESAS_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			FRESAS		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-carburo-frank-dental/"><img src="resources/ICONO_LAB_2022_FRESASFD.png" alt="FRESAS CARBURO FRANK DENTAL" width="324" height="324" srcset="resources/ICONO_LAB_2022_FRESASFD.png 324w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-100x100.jpg 100w, resources/ICONO_LAB_2022_FRESASFD.png 600w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			FRESAS CARBURO FRANK DENTAL		</h2>
+		</a></li>
+<li class="product-category product last">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-horico/"><img src="resources/ICONO_LAB_2022_FRESASH.png" alt="FRESAS HORICO" width="324" height="324">		<h2 class="woocommerce-loop-category__title">
+			FRESAS HORICO		</h2>
+		</a></li>
+<li class="product-category product first">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/hilos-acero-ganchos-preformados/"><img src="resources/ICONOP_2022_PLAIN.jpg" alt="HILOS ACERO GANCHOS PREFORMADOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_HILOS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HILOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HILOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HILOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			HILOS ACERO GANCHOS PREFORMADOS		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/instrumental/"><img src="./resources/ICONO_HERRAMIENTAS_LAB.jpg" alt="INSTRUMENTAL" width="324" height="324" srcset="resources/ICONO_LAB_2022_INSTRU.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HERRAMIENTAS_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HERRAMIENTAS_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HERRAMIENTAS_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			INSTRUMENTAL		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/maquinaria-y-recambios/"><img src="./resources/ICONO_MAQUINARIA_LAB.jpg" alt="MAQUINARIA Y RECAMBIOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_MAQUI.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MAQUINARIA_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MAQUINARIA_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MAQUINARIA_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			MAQUINARIA Y RECAMBIOS		</h2>
+		</a></li>
+<li class="product-category product last">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/mobiliario-laboratorio/"><img src="./resources/ICONO_MOBILIARIO_LAB.jpg" alt="MOBILIARIO" width="324" height="324" srcset="resources/ICONO_LAB_2022_MOBI.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MOBILIARIO_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MOBILIARIO_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MOBILIARIO_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			MOBILIARIO		</h2>
+		</a></li>
+<li class="product-category product first">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/modelos-y-preparacion-modelos/"><img src="./resources/ICONO_MODELOS.jpg" alt="MODELOS Y PREPARACIÓN MODELOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_MODELOS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MODELOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MODELOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MODELOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			MODELOS Y PREPARACIÓN MODELOS		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/pulido-y-abrillantado/"><img src="./resources/ICONO_PULIDO_LAB.png" alt="PULIDO Y ABRILLANTADO" width="324" height="324" srcset="resources/ICONO_LAB_2022_PULIDO.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_PULIDORES_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_PULIDORES_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_PULIDORES_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			PULIDO Y ABRILLANTADO		</h2>
+		</a></li>
+<li class="product-category product">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/resinas-y-accesorios/"><img src="./resources/ICONO_RESINAS.jpg" alt="RESINAS Y ACCESORIOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_RESINA.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_RESINAS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_RESINAS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_RESINAS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			RESINAS Y ACCESORIOS		</h2>
+		</a></li>
+<li class="product-category product last">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/siliconas-y-material-impresion/"><img src="./resources/ICONO_SILICONAS.jpg" alt="SILICONAS Y MATERIAL IMPRESIÓN" width="324" height="324" srcset="resources/ICONO_LAB_2022_SILICONA.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_SILICONAS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_SILICONAS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_SILICONAS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			SILICONAS Y MATERIAL IMPRESIÓN		</h2>
+		</a></li>
+<li class="product-category product first">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/yesos-y-accesorios/"><img src="./resources/ICONO_YESOS-324x324.jpg" alt="YESOS Y ACCESORIOS" width="324" height="324" srcset="resources/ICONO_LAB_2022_YESOS.png 324w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-100x100.jpg 100w, resources/ICONO_LAB_2022_YESOS.png 600w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+			YESOS Y ACCESORIOS		</h2>
+		</a></li>
+</ul>
+</div>
+
 
 
 <div class="storefront-sorting"></div>			</main><!-- #main -->
