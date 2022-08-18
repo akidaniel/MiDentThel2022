@@ -1363,6 +1363,7 @@ body, #content, .entry-content, .post-content, .page-content, .post-excerpt, .en
 .products h2 {font-style: italic; text-transform: lowercase; display:block;
 }
 
+.products h2.woocommerce-loop-product__title {font-style: normal;}
 .products h2:first-letter {text-transform: capitalize;}
 
 #formadientesmall {flex-direction:row; flex-wrap: wrap;}
@@ -1376,31 +1377,44 @@ body, #content, .entry-content, .post-content, .page-content, .post-excerpt, .en
     font-weight: 500;
     margin: 10px 0px 30px;}
 
-.iconogrid ul {display: grid;
-    
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-gap: 1rem;}
+.iconogrid ul {display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(82px, 1fr));
+    grid-gap: 0; align-items: start; margin-top: -2rem;}
+.iconogrid ul::before {display: none;} 
 	
 .iconogrid ul.products li.product {
-    width: unset; margin: auto; float:none; text-align:center; padding:0;}
+    width: -webkit-fill-available!important; margin: 0; border: 1px solid #dfdfdf;
+    padding: 1rem 0.25rem 0!important;
+    min-height: 135px;  border-radius:12px;}
 
+.iconogrid ul.products li.product.grid-item:hover {border: 1px solid red;}
+.iconogrid ul.products li.product.grid-item:hover > a > h2  {color:red}
+.iconogrid ul.products li.product.grid-item:hover > a > img  {-moz-filter: saturate(120%) brightness(1);
+-o-filter: saturate(120%) brightness(1);
+-ms-filter: saturate(120%) brightness(1);
+-webkit-filter:saturate(120%) brightness(1);
+filter: saturate(120%) brightness(1);}
 
-	.iconogrid ul.products li.product h2{padding:0!important;}
-	ul.products li.product img {margin:auto!important; display:inline!important;}	
+.iconogrid ul.products li.product h2{padding:0!important;}
+ul.products li.product img {margin:auto!important; display:inline!important;}	
 .icomogrid grid-items {text-align: center;}	
 
-li.product-category.product > a > h2 {
-    min-height: fit-content;
+.iconogrid ul.products li.product-category.product > a > h2 {
+    min-height: fit-content; font-size: 0.8rem!important;
 }
+
+
 @media screen and (max-width: 500px) {
 	
 .boton {margin-left: 0.4rem;
     padding: 7px;
     border-radius: 30px;
     border: 1px solid #666666;
-    font-size: 0.75rem;
-    width: 5rem;}
+    font-size: 0.7rem;
+    width: 4.1rem;}
 #formadientesmall div:first-child ul li img {max-width:6rem; margin: 0 auto!important;}
+
+.iconogrid ul {grid-template-columns:auto auto auto;}
 	}
 
  </style> 
@@ -2177,7 +2191,9 @@ $('.MIC').on('click', function() {
 </div>
 
 
-<div id="reticulaiconos" class="iconogrid"><ul class="products">
+<div id="reticulaiconos" class="iconogrid">
+<div style="margin-bottom:3rem;">
+<ul class="products">
 <li class="product-category product grid-item first">
 	<a href="https://dent-thel.com/productos-dentales/laboratorio/articulacion/"><img src="resources/2x/Recurso 42.png" alt="ARTICULACIÓN" width="40" height="40" srcset="resources/2x/Recurso 42.png 600w, resources/2x/Recurso 42.png 150w, resources/2x/Recurso 42.png 300w, resources/2x/Recurso 42.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			ARTICULACIÓN		</h2>
@@ -2215,70 +2231,270 @@ $('.MIC').on('click', function() {
 			DESINFECCIÓN Y LIMPIEZA		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/dientes-y-carillas-acrilicos/"><img src="./resources/ICONO_DIENTES.jpg" alt="DIENTES Y CARILLAS ACRÍLICOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_DIENTES.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DIENTES-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DIENTES-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DIENTES-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/dientes-y-carillas-acrilicos/"><img src="resources/2x/Recurso 40.png" alt="DIENTES Y CARILLAS ACRÍLICOS" width="40" height="40" srcset="resources/2x/Recurso 40.png 600w, resources/2x/Recurso 40.png 150w, resources/2x/Recurso 40.png 300w, resources/2x/Recurso 40.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			DIENTES Y CARILLAS ACRÍLICOS		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/discos/"><img src="resources/ICONO_LAB_2022_DISCOS.jpg" alt="DISCOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_DISCOS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DISCOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DISCOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_DISCOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/discos/"><img src="resources/2x/Recurso 4.png" alt="DISCOS" width="40" height="40" srcset="resources/2x/Recurso 4.png 600w, resources/2x/Recurso 4.png 150w, resources/2x/Recurso 4.png 300w, resources/2x/Recurso 4.png 180w" sizes="(max-width: 324px) 100vw, 324px"> <h2 class="woocommerce-loop-category__title">
 			DISCOS		</h2>
 		</a></li>
 <li class="product-category product grid-item last">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/elementos-transporte/"><img src="./resources/ICONO_TRANSPORTE.jpg" alt="ELEMENTOS TRANSPORTE" width="40" height="40" srcset="resources/ICONO_LAB_2022_TPTE.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_TRANSPORTE-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_TRANSPORTE-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_TRANSPORTE-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/elementos-transporte/"><img src="resources/2x/Recurso 31.png" alt="ELEMENTOS TRANSPORTE" width="40" height="40" srcset="resources/2x/Recurso 31.png 600w, resources/2x/Recurso 31.png 150w, resources/2x/Recurso 31.png 300w, resources/2x/Recurso 31.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			ELEMENTOS TRANSPORTE		</h2>
 		</a></li>
 <li class="product-category product grid-item first">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/esqueleticos/"><img src="./resources/ICONO_ESQUELETICOS.jpg" alt="ESQUELÉTICOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_ESQUE.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ESQUELETICOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ESQUELETICOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_ESQUELETICOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/esqueleticos/"><img src="resources/2x/Recurso 35.png" alt="ESQUELÉTICOS" width="40" height="40" srcset="resources/2x/Recurso 35.png 600w, resources/2x/Recurso 35.png 150w, resources/2x/Recurso 35.png 300w, resources/2x/Recurso 35.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			ESQUELÉTICOS		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-y-puntas-montadas/"><img src="./resources/ICONO_FRESAS_LAB.jpg" alt="FRESAS" width="40" height="40" srcset="resources/ICONO_LAB_2022_FRESAS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_FRESAS_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_FRESAS_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_FRESAS_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-y-puntas-montadas/"><img src="resources/2x/Recurso 11.png" alt="FRESAS" width="20" height="40" srcset="resources/2x/Recurso 11.png 600w, resources/2x/Recurso 11.png 150w, resources/2x/Recurso 11.png 300w, resources/2x/Recurso 11.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			FRESAS		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-carburo-frank-dental/"><img src="resources/ICONO_LAB_2022_FRESASFD.png" alt="FRESAS CARBURO FRANK DENTAL" width="40" height="40" srcset="resources/ICONO_LAB_2022_FRESASFD.png 324w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/03/ICONO_FRESAS_CARBURO_FD-1-100x100.jpg 100w, resources/ICONO_LAB_2022_FRESASFD.png 600w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-carburo-frank-dental/"><img src="resources/2x/Recurso 13.png" alt="FRESAS CARBURO FRANK DENTAL" width="40" height="40" srcset="resources/2x/Recurso 13.png 324w, resources/2x/Recurso 13.png 300w, resources/2x/Recurso 13.png 150w, resources/2x/Recurso 13.png 32w, resources/2x/Recurso 13.png 416w, resources/2x/Recurso 13.png 100w, resources/2x/Recurso 13.png 600w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			FRESAS CARBURO FRANK DENTAL		</h2>
 		</a></li>
 <li class="product-category product grid-item last">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-horico/"><img src="resources/ICONO_LAB_2022_FRESASH.png" alt="FRESAS HORICO" width="40" height="40">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/fresas-horico/"><img src="resources/2x/Recurso 12.png" alt="FRESAS HORICO" width="40" height="40">		<h2 class="woocommerce-loop-category__title">
 			FRESAS HORICO		</h2>
 		</a></li>
 <li class="product-category product grid-item first">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/hilos-acero-ganchos-preformados/"><img src="resources/ICONOP_2022_PLAIN.jpg" alt="HILOS ACERO GANCHOS PREFORMADOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_HILOS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HILOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HILOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HILOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/hilos-acero-ganchos-preformados/"><img src="resources/2x/Recurso 26.png" alt="HILOS ACERO GANCHOS PREFORMADOS" width="40" height="40" srcset="resources/2x/Recurso 26.png 600w, resources/2x/Recurso 26.png 150w, resources/2x/Recurso 26.png 300w, resources/2x/Recurso 26.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			HILOS ACERO GANCHOS PREFORMADOS		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/instrumental/"><img src="./resources/ICONO_HERRAMIENTAS_LAB.jpg" alt="INSTRUMENTAL" width="40" height="40" srcset="resources/ICONO_LAB_2022_INSTRU.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HERRAMIENTAS_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HERRAMIENTAS_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_HERRAMIENTAS_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/instrumental/"><img src="resources/2x/Recurso 16.png" alt="INSTRUMENTAL" width="40" height="40" srcset="resources/2x/Recurso 16.png 600w, resources/2x/Recurso 16.png 150w, resources/2x/Recurso 16.png 300w, resources/2x/Recurso 16.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			INSTRUMENTAL		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/maquinaria-y-recambios/"><img src="./resources/ICONO_MAQUINARIA_LAB.jpg" alt="MAQUINARIA Y RECAMBIOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_MAQUI.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MAQUINARIA_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MAQUINARIA_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MAQUINARIA_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/maquinaria-y-recambios/"><img src="resources/2x/Recurso 34.png" alt="MAQUINARIA Y RECAMBIOS" width="40" height="40" srcset="resources/2x/Recurso 34.png 600w, resources/2x/Recurso 34.png 150w, resources/2x/Recurso 34.png 300w, resources/2x/Recurso 34.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			MAQUINARIA Y RECAMBIOS		</h2>
 		</a></li>
 <li class="product-category product grid-item last">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/mobiliario-laboratorio/"><img src="./resources/ICONO_MOBILIARIO_LAB.jpg" alt="MOBILIARIO" width="40" height="40" srcset="resources/ICONO_LAB_2022_MOBI.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MOBILIARIO_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MOBILIARIO_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MOBILIARIO_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/mobiliario-laboratorio/"><img src="resources/2x/Recurso 19.png" alt="MOBILIARIO" width="40" height="40" srcset="resources/2x/Recurso 19.png 600w, resources/2x/Recurso 19.png 150w, resources/2x/Recurso 19.png 300w, resources/2x/Recurso 19.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			MOBILIARIO		</h2>
 		</a></li>
 <li class="product-category product grid-item first">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/modelos-y-preparacion-modelos/"><img src="./resources/ICONO_MODELOS.jpg" alt="MODELOS Y PREPARACIÓN MODELOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_MODELOS.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MODELOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MODELOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_MODELOS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/modelos-y-preparacion-modelos/"><img src="resources/2x/Recurso 33.png" alt="MODELOS Y PREPARACIÓN MODELOS" width="40" height="40" srcset="resources/2x/Recurso 33.png 600w, resources/2x/Recurso 33.png 150w, resources/2x/Recurso 33.png 300w, resources/2x/Recurso 33.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			MODELOS Y PREPARACIÓN MODELOS		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/pulido-y-abrillantado/"><img src="./resources/ICONO_PULIDO_LAB.png" alt="PULIDO Y ABRILLANTADO" width="40" height="40" srcset="resources/ICONO_LAB_2022_PULIDO.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_PULIDORES_LAB-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_PULIDORES_LAB-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_PULIDORES_LAB-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/pulido-y-abrillantado/"><img src="resources/2x/Recurso 9.png" alt="PULIDO Y ABRILLANTADO" width="20" height="40" srcset="resources/2x/Recurso 9.png 600w, resources/2x/Recurso 9.png 150w, resources/2x/Recurso 9.png 300w, resources/2x/Recurso 9.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			PULIDO Y ABRILLANTADO		</h2>
 		</a></li>
 <li class="product-category product grid-item">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/resinas-y-accesorios/"><img src="./resources/ICONO_RESINAS.jpg" alt="RESINAS Y ACCESORIOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_RESINA.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_RESINAS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_RESINAS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_RESINAS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/resinas-y-accesorios/"><img src="resources/2x/Recurso 37.png" alt="RESINAS Y ACCESORIOS" width="40" height="40" srcset="resources/2x/Recurso 37.png 600w, resources/2x/Recurso 37.png 150w, resources/2x/Recurso 37.png 300w, resources/2x/Recurso 37.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			RESINAS Y ACCESORIOS		</h2>
 		</a></li>
 <li class="product-category product grid-item last">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/siliconas-y-material-impresion/"><img src="./resources/ICONO_SILICONAS.jpg" alt="SILICONAS Y MATERIAL IMPRESIÓN" width="40" height="40" srcset="resources/ICONO_LAB_2022_SILICONA.png 600w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_SILICONAS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_SILICONAS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_SILICONAS-180x180.jpg 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/siliconas-y-material-impresion/"><img src="resources/2x/Recurso 41.png" alt="SILICONAS Y MATERIAL IMPRESIÓN" width="40" height="40" srcset="resources/2x/Recurso 41.png 600w, resources/2x/Recurso 41.png 150w, resources/2x/Recurso 41.png 300w, resources/2x/Recurso 41.png 180w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			SILICONAS Y MATERIAL IMPRESIÓN		</h2>
 		</a></li>
 <li class="product-category product grid-item first">
-	<a href="https://dent-thel.com/productos-dentales/laboratorio/yesos-y-accesorios/"><img src="./resources/ICONO_YESOS-324x324.jpg" alt="YESOS Y ACCESORIOS" width="40" height="40" srcset="resources/ICONO_LAB_2022_YESOS.png 324w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2017/10/ICONO_YESOS-100x100.jpg 100w, resources/ICONO_LAB_2022_YESOS.png 600w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/yesos-y-accesorios/"><img src="resources/2x/Recurso 29.png" alt="YESOS Y ACCESORIOS" width="40" height="40" srcset="resources/2x/Recurso 29.png 324w, resources/2x/Recurso 29.png 300w, resources/2x/Recurso 29.png 150w, resources/2x/Recurso 29.png 416w, resources/2x/Recurso 29.png 100w, resources/2x/Recurso 29.png 600w" sizes="(max-width: 324px) 100vw, 324px">		<h2 class="woocommerce-loop-category__title">
 			YESOS Y ACCESORIOS		</h2>
 		</a></li>
 </ul>
+</div>
+
+
+<section class="storefront-product-section storefront-on-sale-products" aria-label="Productos rebajados"><h2 class="section-title" style="margin-bottom: 3rem;">Productos en oferta</h2><div class="woocommerce columns-4 "><ul class="products columns-4">
+<li class="product type-product post-759609 status-publish first instock product_cat-cadcam product_cat-fresas-carburo-outlet product_cat-fresas-dumont product_cat-fresas-fresado-dumont product_cat-fresas-fresado-grano-x-fino product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-para-fresado-c410rh-015-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004019-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA Para fresado C410RH-015-1" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004019-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C410RH-015-1" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-004019-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004019-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004019-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA Para fresado C410RH-015-1" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004019-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004019.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C410RH-015-1" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA Para fresado C410RH-015-1</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>32,83<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>19,70<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-004019</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-para-fresado-c410rh-015-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b95679">FRESA Para fresado C410RH-015-1 cantidad</label>			<input type="number" id="quantity_62fd841b95679" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759609" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759609" data-product_sku="200-004019" aria-label="Añade “FRESA Para fresado C410RH-015-1” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b95e71">FRESA Para fresado C410RH-015-1 cantidad</label>			<input type="number" id="quantity_62fd841b95e71" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+<li class="product type-product post-759607 status-publish instock product_cat-cadcam product_cat-fresas-carburo-outlet product_cat-fresas-dumont product_cat-fresas-fresado-dumont product_cat-fresas-fresado-grano-fino product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-para-fresado-c410r-015-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004018-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA Para fresado C410R-015-1" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004018-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C410R-015-1" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-004018-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004018-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004018-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA Para fresado C410R-015-1" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004018-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004018.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C410R-015-1" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA Para fresado C410R-015-1</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>25,94<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>15,56<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-004018</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-para-fresado-c410r-015-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b991b3">FRESA Para fresado C410R-015-1 cantidad</label>			<input type="number" id="quantity_62fd841b991b3" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759607" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759607" data-product_sku="200-004018" aria-label="Añade “FRESA Para fresado C410R-015-1” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b999a9">FRESA Para fresado C410R-015-1 cantidad</label>			<input type="number" id="quantity_62fd841b999a9" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+<li class="product type-product post-759605 status-publish instock product_cat-cadcam product_cat-fresas-carburo-outlet product_cat-fresas-dumont product_cat-fresas-fresado-dumont product_cat-fresas-fresado-grano-x-fino product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-para-fresado-c408rh-6o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004016-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA Para fresado C408RH-6º-1" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004016-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408RH-6º-1" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-004016-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004016-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004016-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA Para fresado C408RH-6º-1" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004016-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004016.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408RH-6º-1" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA Para fresado C408RH-6º-1</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>38,75<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>23,25<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-004016</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-para-fresado-c408rh-6o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b9c1ad">FRESA Para fresado C408RH-6º-1 cantidad</label>			<input type="number" id="quantity_62fd841b9c1ad" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759605" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759605" data-product_sku="200-004016" aria-label="Añade “FRESA Para fresado C408RH-6º-1” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b9c8a9">FRESA Para fresado C408RH-6º-1 cantidad</label>			<input type="number" id="quantity_62fd841b9c8a9" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+<li class="product type-product post-759603 status-publish last instock product_cat-cadcam product_cat-fresas-carburo-outlet product_cat-fresas-dumont product_cat-fresas-fresado-dumont product_cat-fresas-fresado-grano-x-fino product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-para-fresado-c408rh-4o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004015-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA Para fresado C408RH-4º-1" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004015-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408RH-4º-1" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-004015-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004015-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004015-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA Para fresado C408RH-4º-1" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004015-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004015.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408RH-4º-1" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA Para fresado C408RH-4º-1</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>38,75<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>23,25<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-004015</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-para-fresado-c408rh-4o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b9ef12">FRESA Para fresado C408RH-4º-1 cantidad</label>			<input type="number" id="quantity_62fd841b9ef12" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759603" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759603" data-product_sku="200-004015" aria-label="Añade “FRESA Para fresado C408RH-4º-1” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841b9f5f1">FRESA Para fresado C408RH-4º-1 cantidad</label>			<input type="number" id="quantity_62fd841b9f5f1" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+<li class="product type-product post-759601 status-publish first instock product_cat-cadcam product_cat-fresas-carburo-outlet product_cat-fresas-dumont product_cat-fresas-fresado-dumont product_cat-fresas-fresado-grano-fino product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-para-fresado-c408r-6o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004013-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA Para fresado C408R-6º-1" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004013-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408R-6º-1" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-004013-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004013-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004013-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA Para fresado C408R-6º-1" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004013-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004013.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408R-6º-1" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA Para fresado C408R-6º-1</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>32,83<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>19,70<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-004013</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-para-fresado-c408r-6o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841ba1c41">FRESA Para fresado C408R-6º-1 cantidad</label>			<input type="number" id="quantity_62fd841ba1c41" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759601" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759601" data-product_sku="200-004013" aria-label="Añade “FRESA Para fresado C408R-6º-1” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841ba235e">FRESA Para fresado C408R-6º-1 cantidad</label>			<input type="number" id="quantity_62fd841ba235e" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+<li class="product type-product post-759599 status-publish instock product_cat-cadcam product_cat-fresas-carburo-outlet product_cat-fresas-dumont product_cat-fresas-fresado-dumont product_cat-fresas-fresado-grano-x-fino product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-para-fresado-c408h-6o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004011-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA Para fresado C408H-6º-1" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004011-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408H-6º-1" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-004011-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004011-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-004011-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA Para fresado C408H-6º-1" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-004011-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-004011.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA Para fresado C408H-6º-1" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA Para fresado C408H-6º-1</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>32,31<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>19,39<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-004011</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-para-fresado-c408h-6o-1/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841ba4934">FRESA Para fresado C408H-6º-1 cantidad</label>			<input type="number" id="quantity_62fd841ba4934" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759599" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759599" data-product_sku="200-004011" aria-label="Añade “FRESA Para fresado C408H-6º-1” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841ba4fce">FRESA Para fresado C408H-6º-1 cantidad</label>			<input type="number" id="quantity_62fd841ba4fce" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+<li class="product type-product post-759518 status-publish instock product_cat-fresas-y-puntas-montadas product_cat-fresas-carburo-outlet product_cat-fresas-hibridas-hp product_cat-fresas-hibridas-hp-fresas-carburo-outlet product_cat-laboratorio product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-hibrida-hp-hy7879-050/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-003802-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA HIBRIDA HP HY7879-050" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-003802-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA HIBRIDA HP HY7879-050" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-003802-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-003802-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-003802-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA HIBRIDA HP HY7879-050" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-003802-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-003802.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA HIBRIDA HP HY7879-050" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA HIBRIDA HP HY7879-050</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>28,37<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>17,02<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-003802</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-hibrida-hp-hy7879-050/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841ba76a1">FRESA HIBRIDA HP HY7879-050 cantidad</label>			<input type="number" id="quantity_62fd841ba76a1" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759518" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759518" data-product_sku="200-003802" aria-label="Añade “FRESA HIBRIDA HP HY7879-050” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841ba7db0">FRESA HIBRIDA HP HY7879-050 cantidad</label>			<input type="number" id="quantity_62fd841ba7db0" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+<li class="product type-product post-759516 status-publish last instock product_cat-fresas-carburo-outlet product_cat-fresas-y-puntas-montadas product_cat-fresas-hibridas-hp product_cat-fresas-hibridas-hp-fresas-carburo-outlet product_cat-laboratorio product_cat-outlet has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<a href="https://dent-thel.com/tienda/fresa-hibrida-hp-hy7846-050/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-003801-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="FRESA HIBRIDA HP HY7846-050" data-lazy-srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-003801-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801.jpg 600w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" title="FRESA HIBRIDA HP HY7846-050" data-lazy-src="https://dent-thel.com/wp-content/uploads/2022/07/200-003801-324x324.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-003801-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801.jpg 600w"><noscript><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/07/200-003801-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="FRESA HIBRIDA HP HY7846-050" srcset="https://dent-thel.com/wp-content/uploads/2022/07/200-003801-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/07/200-003801.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="FRESA HIBRIDA HP HY7846-050" /></noscript><style>.wapl-label-id-583108 .product-label:after { border-color: #6699e8; }</style><div class="wapl-label-id-583108 label-wrap wapl-flash label-custom wapl-alignleft">
+			<span class="woocommerce-advanced-product-label product-label label-custom" style="background-color: #6699e8; color: #fff;">
+				<span class="wapl-label-text">Outlet</span>
+			</span>
+		</div><h2 class="woocommerce-loop-product__title">FRESA HIBRIDA HP HY7846-050</h2><div class="aftertitle">
+	<span class="onsale">¡Oferta!</span>
+	
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>28,37<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>17,02<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">40%</span></span>
+<span class="refe">ref: 200-003801</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/fresa-hibrida-hp-hy7846-050/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841baa85c">FRESA HIBRIDA HP HY7846-050 cantidad</label>			<input type="number" id="quantity_62fd841baa85c" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	<a href="?add-to-cart=759516" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="759516" data-product_sku="200-003801" aria-label="Añade “FRESA HIBRIDA HP HY7846-050” a tu carrito" rel="nofollow">Añadir al carrito</a>	<div class="qib-container">
+		<button type="button" class="minus qib-button">-</button>
+		<div class="quantity buttons_added">
+			<label class="screen-reader-text" for="quantity_62fd841bab748">FRESA HIBRIDA HP HY7846-050 cantidad</label>			<input type="number" id="quantity_62fd841bab748" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+		</div>
+		<button type="button" class="plus qib-button">+</button>
+	</div>
+	</div></li>
+</ul>
+</div></section>
+
+
 </div>
 		
 
