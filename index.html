@@ -1439,7 +1439,7 @@ filter: saturate(120%) brightness(1);}
 
 @media screen and (max-width: 700px) {
 .tarjetas {
-    grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));}	
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));}	
 .mibotonera div:last-child {
     flex-wrap: wrap;
 }
@@ -1455,12 +1455,33 @@ filter: saturate(120%) brightness(1);}
 
 @media screen and (max-width: 500px) {
 	
-
+.tarjetas {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));}	
 #formadientesmall div:first-child ul li img {max-width:6rem; margin: 0 auto!important;}
 
 .iconogrid ul {grid-template-columns:auto auto auto;}
 	}
-
+	
+@media screen and (max-width: 420px) {
+.tarjetas {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));}	
+.tarjetas li img {margin-bottom: 0.5rem!important;
+}
+.tarjetas h3 a {
+    display: flex;
+    flex-direction: column;
+}
+.tarjetas h3 {font-size:1rem;}
+.tarjetas p {display:none;}
+.menutarjetas ul.products li.product {margin:0 0 0.5rem!important;}
+	
+}
+@media screen and (max-width: 280px) {
+.tarjetas {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));}
+	
+	
+}
  </style> 
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      
