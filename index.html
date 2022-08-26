@@ -1330,7 +1330,7 @@ filter: saturate(0) brightness(1);}
 body, #content, .entry-content, .post-content, .page-content, .post-excerpt, .entry-summary, .entry-excerpt, .widget-area, .widget, .sidebar, #sidebar, footer, .footer, #footer, .site-footer, #site-title, .site-title, #site-title a, .site-title a, .entry-title, .entry-title a, h1, h2, h3, h4, h5, h6, .widget-title {font-family: 'noway_roundregular';}
  .storefront-breadcrumb {margin-bottom:0; padding-bottom: 0;}
 #formadiente {display:flex;}
-#formaperla, #formadisco, #formadientesmall, .iconogrid {display:none;}
+#formaperla, #formadisco, #formadientesmall, .iconogrid, .menutarjetas {display:none;}
 
 .mibotonera {display:flex; justify-content: center; flex-wrap:wrap; flex-direction:row; margin: 0 2rem 3rem;}
 
@@ -1403,15 +1403,59 @@ filter: saturate(120%) brightness(1);}
   min-height: fit-content; font-size: 0.8rem!important;
 }
 
+.tarjetas {display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));}
+.tarjetas h3 {line-height: 120%;}
+
+.tarjetas h3 a {color: gray;}
+
+.tarjetas h3 a:hover {color: red;}
+
+.tarjetas p {line-height: 140%;}
+
+.tarjetas li img {float: left;
+    margin-right: 1rem!important;
+    border: 1px solid #cccccc;
+    padding: 0.5rem 0.75rem;
+}
+.menutarjetas ul::before {display: none;} 
+
+.tarjetas .product {
+    width: unset!important;
+    text-align: left!important; margin-bottom: 1.5rem!important;
+}
+
+@media screen and (max-width: 1250px) {
+.tarjetas {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));}	
+}
+
+
+@media screen and (max-width: 900px) {
+.boton {margin: 0 0.5rem;}
+  .tarjetas h3 {line-height: 100%; font-size: 1.25rem;}
+
+}
+
+@media screen and (max-width: 700px) {
+.tarjetas {
+    grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));}	
+.mibotonera div:last-child {
+    flex-wrap: wrap;
+}
+.boton {margin: 0.5rem;
+  padding: 1rem 7px;
+  border-radius: 30px;
+  border: 1px solid #666666;
+  font-size: 0.9rem;
+  width: 8rem;}
+  
+
+}
 
 @media screen and (max-width: 500px) {
 	
-.boton {margin-left: 0.4rem;
-  padding: 7px;
-  border-radius: 30px;
-  border: 1px solid #666666;
-  font-size: 0.7rem;
-  width: 4.1rem;}
+
 #formadientesmall div:first-child ul li img {max-width:6rem; margin: 0 auto!important;}
 
 .iconogrid ul {grid-template-columns:auto auto auto;}
@@ -1424,7 +1468,7 @@ filter: saturate(120%) brightness(1);}
 $(document).ready(function() {
 
 var display = function(block_name) {
- $('#formadiente, #formadisco, #formaperla, #formadientesmall, .iconogrid').css('display', 'none');
+ $('#formadiente, #formadisco, #formaperla, #formadientesmall, .iconogrid, .menutarjetas').css('display', 'none');
  $('#' + block_name).css('display', 'flex');
  $('.' + block_name).css('display', 'block');
 
@@ -1451,6 +1495,10 @@ $('.MIC').on('click', function() {
  display('iconogrid', $(this));
 });
 
+$('.MCARDS').on('click', function() {
+ display('menutarjetas', $(this));
+});
+
 });
 </script>
       
@@ -1461,16 +1509,16 @@ $('.MIC').on('click', function() {
   <div id="metaslider_container_722389">
     <div id="metaslider_722389" class="flexslider">
       
-    <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul aria-live="polite" class="slides" style="width: 2000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"><li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-728743 ms-image clone" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/cadcam/impresoras-3d/impresora-3dp-cara-print/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_03_2022_B.jpg" class="slider-722389 slide-728743" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-742777 ms-image flex-active-slide"><a href="https://dent-thel.com/tienda/kit-ventura-impress-2/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_VENTURAECO-1.jpg" class="slider-722389 slide-742777" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-741330 ms-image" aria-hidden="true"><a href="https://www.rhein83.com/es/bibliotecas-cad/#3DIEMME?utm_source=newsletter-607&amp;utm_medium=email&amp;utm_campaign=newsletter-607" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_RHEINCADCAM_2022.jpg" class="slider-722389 slide-741330" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736668 ms-image" aria-hidden="true"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_COMPOVITA_2022.jpg" class="slider-722389 slide-736668" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736655 ms-image" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/clinica/profilaxis-y-prevencion/implantologia-profilaxis-y-prevencion/" target="_self"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_GAPSEAL_2022.jpg" class="slider-722389 slide-736655" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></a></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736657 ms-image" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/clinica/biomateriales-y-sutura/prevencion-y-tratamiento/" target="_self"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_OXYSAFE_2022.jpg" class="slider-722389 slide-736657" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></a></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736659 ms-image" aria-hidden="true"><a href="https://dent-thel.com/etiqueta-producto/reso-pac/" target="_self"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_RESOPAC_2022.jpg" class="slider-722389 slide-736659" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></a></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-729851 ms-image" aria-hidden="true"><a href="https://dent-thel.com/tienda/autoclave-enbio-s/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_07_2022-1.jpg" class="slider-722389 slide-729851" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
-        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-728743 ms-image" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/cadcam/impresoras-3d/impresora-3dp-cara-print/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_03_2022_B.jpg" class="slider-722389 slide-728743" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
-      <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-742777 ms-image clone" aria-hidden="true"><a href="https://dent-thel.com/tienda/kit-ventura-impress-2/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_VENTURAECO-1.jpg" class="slider-722389 slide-742777" alt="PULIDORA de alta velocidad" loading="lazy" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li></ul></div><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="https://dent-thel.com/productos-dentales/laboratorio/#">Anterior</a></li><li class="flex-nav-next"><a class="flex-next" href="https://dent-thel.com/productos-dentales/laboratorio/#">Siguiente</a></li></ul></div>
+    <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul aria-live="polite" class="slides" style="width: 2000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"><li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-728743 ms-image clone" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/cadcam/impresoras-3d/impresora-3dp-cara-print/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_03_2022_B.jpg" class="slider-722389 slide-728743" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-742777 ms-image flex-active-slide"><a href="https://dent-thel.com/tienda/kit-ventura-impress-2/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_VENTURAECO-1.jpg" class="slider-722389 slide-742777" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-741330 ms-image" aria-hidden="true"><a href="https://www.rhein83.com/es/bibliotecas-cad/#3DIEMME?utm_source=newsletter-607&amp;utm_medium=email&amp;utm_campaign=newsletter-607" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_RHEINCADCAM_2022.jpg" class="slider-722389 slide-741330" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_RHEINCADCAM_2022-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736668 ms-image" aria-hidden="true"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_COMPOVITA_2022.jpg" class="slider-722389 slide-736668" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_COMPOVITA_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736655 ms-image" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/clinica/profilaxis-y-prevencion/implantologia-profilaxis-y-prevencion/" target="_self"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_GAPSEAL_2022.jpg" class="slider-722389 slide-736655" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_GAPSEAL_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></a></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736657 ms-image" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/clinica/biomateriales-y-sutura/prevencion-y-tratamiento/" target="_self"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_OXYSAFE_2022.jpg" class="slider-722389 slide-736657" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_OXYSAFE_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></a></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-736659 ms-image" aria-hidden="true"><a href="https://dent-thel.com/etiqueta-producto/reso-pac/" target="_self"><img width="1400" height="301" src="./resources/DENT-THEL_SLIDE_RESOPAC_2022.jpg" class="slider-722389 slide-736659" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022.jpg 1400w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/03/DENT-THEL_SLIDE_RESOPAC_2022-416x89.jpg 416w" sizes="(max-width: 1400px) 100vw, 1400px" draggable="false"></a></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-729851 ms-image" aria-hidden="true"><a href="https://dent-thel.com/tienda/autoclave-enbio-s/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_07_2022-1.jpg" class="slider-722389 slide-729851" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_07_2022-1-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
+        <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-728743 ms-image" aria-hidden="true"><a href="https://dent-thel.com/productos-dentales/cadcam/impresoras-3d/impresora-3dp-cara-print/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_03_2022_B.jpg" class="slider-722389 slide-728743" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/02/DENT-THEL_SLIDE_03_2022_B-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li>
+      <li style="display: block; width: 0px; margin-right: 0px; float: left;" class="slide-742777 ms-image clone" aria-hidden="true"><a href="https://dent-thel.com/tienda/kit-ventura-impress-2/" target="_self"><img width="1200" height="258" src="./resources/DENT-THEL_SLIDE_VENTURAECO-1.jpg" class="slider-722389 slide-742777" alt="PULIDORA de alta velocidad" rel="" title="PULIDORA de alta velocidad" srcset="https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1.jpg 1200w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-300x65.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-1024x220.jpg 1024w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-768x165.jpg 768w, https://dent-thel.com/wp-content/uploads/2022/04/DENT-THEL_SLIDE_VENTURAECO-1-416x89.jpg 416w" sizes="(max-width: 1200px) 100vw, 1200px" draggable="false"></a></li></ul></div><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="https://dent-thel.com/productos-dentales/laboratorio/#">Anterior</a></li><li class="flex-nav-next"><a class="flex-next" href="https://dent-thel.com/productos-dentales/laboratorio/#">Siguiente</a></li></ul></div>
     
   </div>
 </div></div>
@@ -1483,6 +1531,7 @@ $('.MIC').on('click', function() {
 <a id="disco" href="#" class="boton CT">Forma disco</a>
 <a id="dientepeke" href="#" class="boton FDS">Iconos pequeños</a>
 <a id="iconomenu" href="#" class="boton MIC">Menú iconos</a>
+<a id="menucards" href="#" class="boton MCARDS">Menú tarjetas</a>
 
 </div></div>  
 
@@ -1921,7 +1970,7 @@ $('.MIC').on('click', function() {
 <div><h1 class="woocommerce-products-header">Ofertas laboratorio</h1></div>
 <div class="woocommerce columns-4 "><ul class="products columns-4">
 <li class="product type-product post-746113 status-publish first instock product_cat-laboratorio product_cat-maquinaria-y-recambios product_cat-generadores-de-vapor product_tag-oferta-vaporeta-renfert has-post-thumbnail sale featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/power-steamer-i-carga-manual/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="POWER Vapor I Carga manual" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="POWER Vapor I Carga manual"><h2 class="woocommerce-loop-product__title">POWER Vapor I Carga manual</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/power-steamer-i-carga-manual/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="POWER Vapor I Carga manual" srcset="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="POWER Vapor I Carga manual"><h2 class="woocommerce-loop-product__title">POWER Vapor I Carga manual</h2><div class="aftertitle">
 	<span class="onsale">¡Oferta!</span>
 	
 	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>1.782,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>1.336,50<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">25%</span></span>
@@ -1941,7 +1990,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-722086 status-publish instock product_cat-cadcam product_cat-impresora-3dp-cara-print product_cat-impresoras-3d product_tag-ofertas-kulzer has-post-thumbnail sale featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/cara-print-oferta-starter-pack/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="CARA PRINT Oferta Starter Pack" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="CARA PRINT Oferta Starter Pack"><h2 class="woocommerce-loop-product__title">CARA PRINT Oferta Starter Pack</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/cara-print-oferta-starter-pack/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="CARA PRINT Oferta Starter Pack" srcset="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="CARA PRINT Oferta Starter Pack"><h2 class="woocommerce-loop-product__title">CARA PRINT Oferta Starter Pack</h2><div class="aftertitle">
 	<span class="onsale">¡Oferta!</span>
 	
 	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>17.470,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>13.993,47<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">19.9%</span></span>
@@ -1961,7 +2010,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-721925 status-publish instock product_cat-aparatos product_cat-autoclave-enbio product_cat-clinica has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/autoclave-enbio-s/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO S" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO S"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO S</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/autoclave-enbio-s/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO S" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO S"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO S</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>1.790,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 241-000150</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/autoclave-enbio-s/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -1979,7 +2028,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-717200 status-publish last instock product_cat-aparatos product_cat-autoclave-enbio product_cat-clinica has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/autoclave-enbio-pro/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO Pro" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO Pro"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO Pro</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/autoclave-enbio-pro/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO Pro" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO Pro"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO Pro</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>2.100,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 241-000151</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/autoclave-enbio-pro/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -1997,7 +2046,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-717174 status-publish first instock product_cat-clinica product_cat-desechables product_cat-desinfeccion-y-limpieza product_cat-guantes-de-latex product_cat-guantes-latex-sin-polvo product_cat-laboratorio has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/100-guantes-latex-sp-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Latex Sin Polvo M" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Latex Sin Polvo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Latex Sin Polvo M</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/100-guantes-latex-sp-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Latex Sin Polvo M" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Latex Sin Polvo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Latex Sin Polvo M</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>6,50<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 400-000010</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/100-guantes-latex-sp-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2015,7 +2064,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-709726 status-publish instock product_cat-clinica product_cat-desechables product_cat-desinfeccion-y-limpieza product_cat-guantes-de-nitrilo product_cat-guantes-nitrilo product_cat-laboratorio has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/100-guantes-nitrilo-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Nitrilo M" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Nitrilo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Nitrilo M</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/100-guantes-nitrilo-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Nitrilo M" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Nitrilo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Nitrilo M</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>4,99<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 400-000101</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/100-guantes-nitrilo-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2033,7 +2082,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-709062 status-publish instock product_cat-clinica product_cat-desechables product_cat-mascarillas has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/mascarillas-quirurgicas-azules-50-ud/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="MASCARILLAS QUIRURGICAS azules 50 ud" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="MASCARILLAS QUIRURGICAS azules 50 ud"><h2 class="woocommerce-loop-product__title">MASCARILLAS QUIRURGICAS azules 50 ud</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/mascarillas-quirurgicas-azules-50-ud/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="MASCARILLAS QUIRURGICAS azules 50 ud" srcset="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="MASCARILLAS QUIRURGICAS azules 50 ud"><h2 class="woocommerce-loop-product__title">MASCARILLAS QUIRURGICAS azules 50 ud</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>2,20<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 257-00300</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/mascarillas-quirurgicas-azules-50-ud/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2056,7 +2105,7 @@ $('.MIC').on('click', function() {
 <div><h1 class="woocommerce-products-header">Novedades laboratorio</h1></div>
 <div class="woocommerce columns-4 "><ul class="products columns-4">
 <li class="product type-product post-746113 status-publish first instock product_cat-laboratorio product_cat-maquinaria-y-recambios product_cat-generadores-de-vapor product_tag-oferta-vaporeta-renfert has-post-thumbnail sale featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/power-steamer-i-carga-manual/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="POWER Vapor I Carga manual" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="POWER Vapor I Carga manual"><h2 class="woocommerce-loop-product__title">POWER Vapor I Carga manual</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/power-steamer-i-carga-manual/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="POWER Vapor I Carga manual" srcset="https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/RF1845-0000.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="POWER Vapor I Carga manual"><h2 class="woocommerce-loop-product__title">POWER Vapor I Carga manual</h2><div class="aftertitle">
 	<span class="onsale">¡Oferta!</span>
 	
 	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>1.782,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>1.336,50<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">25%</span></span>
@@ -2076,7 +2125,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-722086 status-publish instock product_cat-cadcam product_cat-impresora-3dp-cara-print product_cat-impresoras-3d product_tag-ofertas-kulzer has-post-thumbnail sale featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/cara-print-oferta-starter-pack/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="CARA PRINT Oferta Starter Pack" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="CARA PRINT Oferta Starter Pack"><h2 class="woocommerce-loop-product__title">CARA PRINT Oferta Starter Pack</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/cara-print-oferta-starter-pack/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="CARA PRINT Oferta Starter Pack" srcset="https://dent-thel.com/wp-content/uploads/2022/01/422-003005-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/422-003005.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="CARA PRINT Oferta Starter Pack"><h2 class="woocommerce-loop-product__title">CARA PRINT Oferta Starter Pack</h2><div class="aftertitle">
 	<span class="onsale">¡Oferta!</span>
 	
 	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>17.470,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>13.993,47<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></ins><span class="snippet-dto-porcentaje">19.9%</span></span>
@@ -2096,7 +2145,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-721925 status-publish instock product_cat-aparatos product_cat-autoclave-enbio product_cat-clinica has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/autoclave-enbio-s/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO S" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO S"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO S</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/autoclave-enbio-s/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO S" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000150-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000150.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO S"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO S</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>1.790,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 241-000150</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/autoclave-enbio-s/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2114,7 +2163,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-717200 status-publish last instock product_cat-aparatos product_cat-autoclave-enbio product_cat-clinica has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/autoclave-enbio-pro/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO Pro" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO Pro"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO Pro</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/autoclave-enbio-pro/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AUTOCLAVE ENBIO Pro" srcset="https://dent-thel.com/wp-content/uploads/2022/01/241-000151-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/01/241-000151.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="AUTOCLAVE ENBIO Pro"><h2 class="woocommerce-loop-product__title">AUTOCLAVE ENBIO Pro</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>2.100,00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 241-000151</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/autoclave-enbio-pro/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2132,7 +2181,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-717174 status-publish first instock product_cat-clinica product_cat-desechables product_cat-desinfeccion-y-limpieza product_cat-guantes-de-latex product_cat-guantes-latex-sin-polvo product_cat-laboratorio has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/100-guantes-latex-sp-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Latex Sin Polvo M" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Latex Sin Polvo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Latex Sin Polvo M</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/100-guantes-latex-sp-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Latex Sin Polvo M" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000010-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000010.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Latex Sin Polvo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Latex Sin Polvo M</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>6,50<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 400-000010</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/100-guantes-latex-sp-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2150,7 +2199,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-709726 status-publish instock product_cat-clinica product_cat-desechables product_cat-desinfeccion-y-limpieza product_cat-guantes-de-nitrilo product_cat-guantes-nitrilo product_cat-laboratorio has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/100-guantes-nitrilo-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Nitrilo M" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Nitrilo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Nitrilo M</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/100-guantes-nitrilo-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="100 GUANTES Nitrilo M" srcset="https://dent-thel.com/wp-content/uploads/2022/05/400-000101-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/400-000101.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="100 GUANTES Nitrilo M"><h2 class="woocommerce-loop-product__title">100 GUANTES Nitrilo M</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>4,99<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 400-000101</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/100-guantes-nitrilo-m/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2168,7 +2217,7 @@ $('.MIC').on('click', function() {
 	</div>
 	</div></li>
 <li class="product type-product post-709062 status-publish instock product_cat-clinica product_cat-desechables product_cat-mascarillas has-post-thumbnail featured taxable shipping-taxable purchasable product-type-simple">
-	<a href="https://dent-thel.com/tienda/mascarillas-quirurgicas-azules-50-ud/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="MASCARILLAS QUIRURGICAS azules 50 ud" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="MASCARILLAS QUIRURGICAS azules 50 ud"><h2 class="woocommerce-loop-product__title">MASCARILLAS QUIRURGICAS azules 50 ud</h2><div class="aftertitle">
+	<a href="https://dent-thel.com/tienda/mascarillas-quirurgicas-azules-50-ud/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="324" height="324" src="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="MASCARILLAS QUIRURGICAS azules 50 ud" srcset="https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2021/09/KA067013-1.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="MASCARILLAS QUIRURGICAS azules 50 ud"><h2 class="woocommerce-loop-product__title">MASCARILLAS QUIRURGICAS azules 50 ud</h2><div class="aftertitle">
 	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>2,20<span class="woocommerce-Price-currencySymbol">€</span></bdi></span></span>
 <span class="refe">ref: 257-00300</span></div></a><div class="addto"><a href="https://dent-thel.com/tienda/mascarillas-quirurgicas-azules-50-ud/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>	<div class="qib-container">
  <button type="button" class="minus qib-button">-</button>
@@ -2281,6 +2330,10 @@ $('.MIC').on('click', function() {
 <li class="product-category product grid-item">
 	<a href="https://dent-thel.com/productos-dentales/laboratorio/pulido-y-abrillantado/"><img src="resources/2x/Recurso 51.png" alt="PULIDO Y ABRILLANTADO" width="40" height="40" srcset="resources/2x/Recurso 51.png 600w, resources/2x/Recurso 51.png 150w, resources/2x/Recurso 51.png 300w, resources/2x/Recurso 51.png 180w" sizes="(max-width: 324px) 100vw, 324px"> <h2 class="woocommerce-loop-category__title">
  PULIDO Y ABRILLANTADO </h2>
+ </a></li>
+ <li class="product-category product grid-item">
+	<a href="https://dent-thel.com/productos-dentales/laboratorio/puntas-montadas/"><img src="resources/2x/Recurso 63.png" alt="PUNTAS MONTADAS" width="40" height="40" srcset="resources/2x/Recurso 63.png 600w, resources/2x/Recurso 63.png 150w, resources/2x/Recurso 63.png 300w, resources/2x/Recurso 63.png 180w" sizes="(max-width: 324px) 100vw, 324px"> <h2 class="woocommerce-loop-category__title">
+ PUNTAS MONTADAS</h2>
  </a></li>
 <li class="product-category product grid-item">
 	<a href="https://dent-thel.com/productos-dentales/laboratorio/resinas-y-accesorios/"><img src="resources/2x/Recurso 37.png" alt="RESINAS Y ACCESORIOS" width="40" height="40" srcset="resources/2x/Recurso 37.png 600w, resources/2x/Recurso 37.png 150w, resources/2x/Recurso 37.png 300w, resources/2x/Recurso 37.png 180w" sizes="(max-width: 324px) 100vw, 324px"> <h2 class="woocommerce-loop-category__title">
@@ -2496,6 +2549,156 @@ $('.MIC').on('click', function() {
 
 
 </div>
+
+
+
+<div class="menutarjetas">
+<ul class="products tarjetas">
+
+<li class="product-category product">
+<section class="">
+<h3><a href="#"><img class="" src="resources/2x/Recurso 42.png" alt="" width="100" height="100">Articulación</a></h3>
+<p>Papel de articular, líquido de oclusión</p>
+</section>
+</li>
+
+
+<li class="product-category product">
+<section class="">
+<h3><a href="#"><img class="alignleft 28501" src="resources/2x/Recurso 30.png" alt="" width="100" height="100">Articuladores</a></h3>
+<p>Articuladores, platinas y reposiciones</p>
+</section>
+</li>
+
+<li class="product-category product">
+<section class="">
+<h3><a href="#"><img class="" src="resources/2x/Recurso 55.png" alt="" width="100" height="100">Ataches y elementos retentivos</a></h3>
+<p>Ataches, tornillos, calcinables, carcasas y teflones</p>
+</section></li>
+
+<li class="product-category product">
+<section class="">
+<h3><a href="#"><img class="alignleft 28505" src="resources/2x/Recurso 15.png" alt="" width="100" height="100">Cementos laboratorio</a></h3>
+<p></span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28585" src="resources/2x/Recurso 48.png" alt="" width="100" height="100">Cerámica y accesorios</a></h3>
+<p>Esmaltes, cilindros, bandejas, paletas y pinceles</span></p>
+</section></li>
+
+<li class="product-category product">
+<section class="">
+<h3><a href="#"><img class="alignleft 28587" src="resources/2x/Recurso 25.png" alt="" width="100" height="100">Ceras y accesorios</a></h3>
+<p>Cera en planchas, de pegar, cervicales, preformas, hilos, pinceles y lingoteras</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="28843" src="resources/2x/Recurso 61.png" alt="" width="100" height="100">Colado y soldaduras</a></h3>
+<p>Revestimientos, líquido expansor, soldaduras, cilindros y crisoles</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28591" src="resources/2x/Recurso 18.png" alt="" width="100" height="100">Composites laboratorio</a></h3>
+<p>Composites, esmaltes, primers, maquillajes, líquidos y separador</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28742" src="resources/2x/Recurso 57.png" alt="" width="100" height="100">Desinfección y limpieza</a></h3>
+<p>Desinfectantes, disolventes, guantes</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28740" src="resources/2x/Recurso 40.png" alt="" width="100" height="100">Dientes y carillas acrílicos</a></h3>
+<p></span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28751" src="resources/2x/Recurso 56.png" alt="" width="100" height="100">Discos</a></h3>
+<p>Discos carborundum, diamantados, fibra de vidrio, papel, plástico y mandriles</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28753" src="resources/2x/Recurso 50.png" alt="" width="100" height="100">Elementos transporte</a></h3>
+<p>Bandejas, cajas, carros y cajitas prótesis y ortodoncia</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="28755" src="resources/2x/Recurso 35.png" alt="" width="100" height="100">Esqueléticos</a></h3>
+<p>Ceras preparación, modelar y calibradas, endurecedor, gomas pulido, líquido electrolítico, metales, muflas, revestimientos</span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="" src="resources/2x/Recurso 58.png" alt="" width="100" height="100">Fresas</a></h3>
+<p>Fresas carburo, diamantadas, diamante macizo, híbridas, recortadoras y freseros</span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="" src="resources/2x/Recurso 60.png" alt="" width="100" height="100">Fresas carburo Frank Dental</a></h3>
+<p></span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="28761" src="resources/2x/Recurso 59.png" alt="" width="100" height="100">Fresas Horico</a></h3>
+<p></span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="28763" src="resources/2x/Recurso 26.png" alt="" width="100" height="100">Hilos acero y ganchos preformados</a></h3>
+<p>Add a copyright notice to your garment file</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28847" src="resources/2x/Recurso 16.png" alt="" width="100" height="100">Instrumental</a></h3>
+<p>Alicates, bisturís, cuchillos, espátulas, limas, lupas, gafas, medidores, mecheros, muflas, pinzas, tacitas, tenazas, tijeras</span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28835" src="resources/2x/Recurso 34.png" alt="" width="100" height="100">Maquinaria y recambios</a></h3>
+<p>Aspiración, baño electrolítico, calentadores de cera, chorreadoras, compresores, espátulas eléctricas, hornos, micromotores, polimerizadoras, prensa, pulidoras, recortadoras, sopletes, turbinas, vibradores</span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28837" src="resources/2x/Recurso 19.png" alt="" width="100" height="99">
+Mobiliario</a></h3>
+<p>Asrilleras, cajas de trabajo, mesas de trabajo, sillas, sopladores</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="28761" src="resources/2x/Recurso 54.png" alt="" width="100" height="100">Modelos y preparación de modelos</a></h3>
+<p>Bloqueado de muñones, brocas para pins, desmontables, endurecedor modelos, espaciadores,lápiz marcador, lápiz aislante, pegamentos, perforador de pins, pins, bi-V-Pins, bi-Pins, separadores yeso/cera, sierras</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="28763" src="resources/2x/Recurso 51.png" alt="" width="100" height="100">Pulido y abrillantado</a></h3>
+<p>Cepillos, discos scotchbrite, fieltros, mandriles, óxido aluminio, pastas y cremas pulir, perlas de brillo, pulidores, ruedas, tosca, piedra pómez</p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="28763" src="resources/2x/Recurso 63.png" alt="" width="100" height="100">Puntas montadas</a></h3>
+<p></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28847" src="resources/2x/Recurso 37.png" alt="" width="100" height="100">Resinas y accesorios</a></h3>
+<p>Arcos fibra, bonding, caracterización dentaduras, cartuchos resina inyectar, laca selladora, opakers, planchas, plantillas cubetas, refuerzos, resinas, separadores, vetas</span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28835" src="resources/2x/Recurso 41.png" alt="" width="100" height="100">Siliconas y material impresión</a></h3>
+<p>Alginatos, bonding cubetas, boquillas mezcladoras, muflas duplicar, pistolas mezcladoras, retardador fraguado, separador siliconas, siliconas</span></p>
+</section></li>
+
+<li class="product-category product"><section class="">
+<h3><a href="#"><img class="alignleft 28837" src="resources/2x/Recurso 29.png" alt="" width="100" height="99">
+Yesos y accesorios</a></h3>
+<p>Aislantes y sellado, disolvente, resina poliuretánica, yesos y zocaladores</p>
+</section></li>
+
+</ul>
+</div>
+
+
  
 
 <div class="storefront-sorting"></div> </main><!-- #main -->
@@ -2570,7 +2773,7 @@ caballero, 5-7 bajos.<br>
  <div id="woocommerce_recently_viewed_products-3" class="widget woocommerce widget_recently_viewed_products"><span class="gamma widget-title">Vistos recientemente</span><ul class="product_list_widget"><li>
 	
 	<a href="https://dent-thel.com/tienda/kit-antironquidos-forward/">
- <img width="324" height="324" src="./resources/LA5300-07-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="KIT Antironquidos Forward" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="KIT Antironquidos Forward"> <span class="product-title">KIT Antironquidos Forward</span>
+ <img width="324" height="324" src="./resources/LA5300-07-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="KIT Antironquidos Forward" srcset="https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/06/LA5300-07.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="KIT Antironquidos Forward"> <span class="product-title">KIT Antironquidos Forward</span>
 	</a>
 
 	
@@ -2579,7 +2782,7 @@ caballero, 5-7 bajos.<br>
 <li>
 	
 	<a href="https://dent-thel.com/tienda/optidisc-discos-o96mm-100ud/">
- <img width="324" height="324" src="./resources/181-036338P-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="OPTIDISC™ Discos ø9,6mm" loading="lazy" srcset="https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="OPTIDISC™ Discos ø9,6mm"> <span class="product-title">OPTIDISC™ Discos ø9,6mm</span>
+ <img width="324" height="324" src="./resources/181-036338P-324x324.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="OPTIDISC™ Discos ø9,6mm" srcset="https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-324x324.jpg 324w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-300x300.jpg 300w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-150x150.jpg 150w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-32x32.jpg 32w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-416x416.jpg 416w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P-100x100.jpg 100w, https://dent-thel.com/wp-content/uploads/2022/05/181-036338P.jpg 600w" sizes="(max-width: 324px) 100vw, 324px" title="OPTIDISC™ Discos ø9,6mm"> <span class="product-title">OPTIDISC™ Discos ø9,6mm</span>
 	</a>
 
 	
