@@ -8,7 +8,7 @@ carousel_promo_1_slider_init = function() {
               $PauseOnHover: 0,
               $SlideWidth: 260,
               $SlideHeight: 0,
-              $SlideSpacing: 12,
+              $SlideSpacing: 4,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,
                 $Steps: 5
