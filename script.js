@@ -26,3 +26,14 @@ $('.CT').on('click', function() {
 
 
 });
+
+
+var glide = new Glide('#my-slider', {
+  type: 'carousel',
+  startAt: 0,
+  perView: 3
+})
+
+glide.mount()
+
+

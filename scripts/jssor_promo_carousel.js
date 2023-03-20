@@ -6,9 +6,9 @@ carousel_promo_1_slider_init = function() {
               $SlideDuration: 250,
               $FillMode: 4,
               $PauseOnHover: 0,
-              $SlideWidth: 250,
-              //$SlideHeight: 250,
-              $SlideSpacing: 30,
+              $SlideWidth: 260,
+              $SlideHeight: 0,
+              $SlideSpacing: 12,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,
                 $Steps: 5
@@ -57,7 +57,7 @@ carousel_promo_2_slider_init = function() {
               $SlideDuration: 250,
               $FillMode: 4,
               $PauseOnHover: 3,
-              $SlideWidth: 250,
+              $SlideWidth: 260,
               $SlideHeight: 250,
               $SlideSpacing: 30,
               $ArrowNavigatorOptions: {
