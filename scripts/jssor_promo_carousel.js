@@ -11,6 +11,7 @@ carousel_promo_1_slider_init = function() {
               $SlideSpacing: 4,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,
+				$arrowBottomOffset: 0,
                 $Steps: 5
               },
               $BulletNavigatorOptions: {
