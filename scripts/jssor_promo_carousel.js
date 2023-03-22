@@ -53,24 +53,24 @@ carousel_promo_1_slider_init = function() {
 carousel_promo_2_slider_init = function() {
 
             var carousel_promo_2_options = {
-              $AutoPlay: 0,
-              $AutoPlaySteps: 5,
+               $AutoPlay: 0,
+              $AutoPlaySteps: 0,
               $SlideDuration: 250,
               $FillMode: 4,
-              $PauseOnHover: 3,
+              $PauseOnHover: 0,
               $SlideWidth: 260,
-              $SlideHeight: 250,
-              $SlideSpacing: 30,
+              $SlideHeight: 0,
+              $SlideSpacing: -27,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,
+				$arrowBottomOffset: 0,
                 $Steps: 5
               },
               $BulletNavigatorOptions: {
                 $Class: $JssorBulletNavigator$,
-                $SpacingY: 30
+                $SpacingY: 0
               }
             };
-
              var carousel_promo_2_slider = new $JssorSlider$("carousel_promo_2", carousel_promo_2_options);
 
            //#region responsive code begin
