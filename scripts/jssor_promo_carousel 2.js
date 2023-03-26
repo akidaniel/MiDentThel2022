@@ -6,9 +6,9 @@ carousel_promo_1_slider_init = function() {
               $SlideDuration: 250,
               $FillMode: 4,
               $PauseOnHover: 0,
-              $SlideWidth: 220,
-              $SlideHeight: 370,
-              $SlideSpacing: 18,
+              $SlideWidth: 260,
+              $SlideHeight: 0,
+              $SlideSpacing: -27,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,
 				$arrowBottomOffset: 0,
@@ -18,30 +18,9 @@ carousel_promo_1_slider_init = function() {
                 $Class: $JssorBulletNavigator$,
                 $SpacingY: 0
               }
-};
-			
-// CAMBIOS PARA PANTALLAS DE MOVILES
-// Check the device screen size and modify the options accordingly
-var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            };
 
-if (screenWidth <= 800) {
-    // For mobile devices, modify the options
-carousel_promo_1_options.$SlideSpacing = 30,
-carousel_promo_1_options.$SlideWidth = 228,
-    carousel_promo_1_options.$ArrowNavigatorOptions.$Steps = 1;
-	
-}
-
-// Initialize the Jssor Slider with the modified options
-var carousel_promo_1_slider = new $JssorSlider$("carousel_promo_1", carousel_promo_1_options);
-//FIN CAMBIOS PARA PANTALLAS DE MOVILES
-			
-// Check the device screen size and modify the options accordingly
-var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-
- var carousel_promo_1_slider = new $JssorSlider$("carousel_promo_1", carousel_promo_1_options);
-
+            var carousel_promo_1_slider = new $JssorSlider$("carousel_promo_1", carousel_promo_1_options);
 
            //#region responsive code begin
             //the following code is to place slider in the center of parent container with no scale
@@ -79,9 +58,9 @@ carousel_promo_2_slider_init = function() {
               $SlideDuration: 250,
               $FillMode: 4,
               $PauseOnHover: 0,
-              $SlideWidth: 220,
-              $SlideHeight: 370,
-              $SlideSpacing: 18,
+              $SlideWidth: 260,
+              $SlideHeight: 0,
+              $SlideSpacing: -27,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,
 				$arrowBottomOffset: 0,
@@ -91,30 +70,7 @@ carousel_promo_2_slider_init = function() {
                 $Class: $JssorBulletNavigator$,
                 $SpacingY: 0
               }
-};
-
-
-// CAMBIOS PARA PANTALLAS DE MOVILES
-// Check the device screen size and modify the options accordingly
-var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-if (screenWidth <= 800) {
-// For mobile devices, modify the options
-carousel_promo_2_options.$SlideSpacing = 30,
-carousel_promo_2_options.$SlideWidth = 228,
-carousel_promo_2_options.$ArrowNavigatorOptions.$Steps = 1;
-	
-}
-
-// Initialize the Jssor Slider with the modified options
-var carousel_promo_2_slider = new $JssorSlider$("carousel_promo_2", carousel_promo_2_options);
-//FIN CAMBIOS PARA PANTALLAS DE MOVILES
-
-			
-// Check the device screen size and modify the options accordingly
-var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-
+            };
              var carousel_promo_2_slider = new $JssorSlider$("carousel_promo_2", carousel_promo_2_options);
 
            //#region responsive code begin
