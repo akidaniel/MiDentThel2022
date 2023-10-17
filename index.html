@@ -2191,7 +2191,6 @@ top: 28px;
 -o-animation: spin1 0.5s 1 linear;
 -ms-animation: spin1 0.5s 1 linear;
 animation: spin1 0.5s 1 linear;
-
 }
 
 .FOLLETO #vlightbox1 {margin:0 auto; background: white;
@@ -4878,6 +4877,7 @@ window.onload = setTimeout(function (){
 		if( $(event.target).is('.close') || $(event.target).is('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup') || $(event.target).is('.cursoleaf')|| $(event.target).is('.bts-popup-container') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
+			$('body').css("overflow", "auto");
 		}
 	});
 //close popup when clicking the esc keyboard button
@@ -4899,14 +4899,17 @@ window.onload = setTimeout(function (){
 	$(document).ready(function(){
     $("#gale01").click(function(){
         $(".gale01-popup").delay(10).addClass('is-visible');
+		$('body').css("overflow", "hidden");
     });
 	
 });
 
-//abrir galeria #gale01
+//abrir galeria #gale02
 	$(document).ready(function(){
     $("#gale02").click(function(){
         $(".gale02-popup").delay(10).addClass('is-visible');
+		$('body').css("overflow", "hidden");
+
     });
 	
 });
@@ -4921,6 +4924,8 @@ $('#gale01, #gale02').click(function(e)
 
 });
 </script>
+
+
     
 <div class="joinchat joinchat--right joinchat--footer-bar joinchat--show" data-settings="{&quot;telephone&quot;:&quot;34659972131&quot;,&quot;mobile_only&quot;:false,&quot;button_delay&quot;:3,&quot;whatsapp_web&quot;:false,&quot;qr&quot;:false,&quot;message_views&quot;:2,&quot;message_delay&quot;:5,&quot;message_badge&quot;:false,&quot;message_send&quot;:&quot;&quot;,&quot;message_hash&quot;:&quot;68987a3&quot;}" style="--peak:url(\#joinchat__message__peak);">
 
