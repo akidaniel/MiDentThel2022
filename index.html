@@ -2123,7 +2123,7 @@ padding: 5px 0;
 /*FIN AGENDA*/
 
 /*MODAL POPUP*/
-.bts-popup, .curso2popup, .gale01-popup {
+.bts-popup, .curso2popup, .gale01-popup, .gale02-popup {
 position: fixed;
 overflow:auto;
 left: 0;
@@ -2138,7 +2138,7 @@ visibility: hidden;
 transition: opacity 0.3s 0s, visibility 0s 0.3s;
 z-index: 120;
 }
-.bts-popup.is-visible, .curso2popup.is-visible, .gale01-popup.is-visible {
+.bts-popup.is-visible, .curso2popup.is-visible, .gale01-popup.is-visible, .gale02-popup.is-visible {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 1s 0s, visibility 1s 0s;
@@ -2199,7 +2199,7 @@ animation: spin1 0.5s 1 linear;
     justify-content: center;
     gap: 4rem;}
 	
-.gale01-popup .bts-popup-container {margin: 0 auto; transform: translateY(20%) scale(1.1); text-align: right;}
+.gale01-popup .bts-popup-container, .gale02-popup .bts-popup-container {margin: 0 auto; transform: translateY(20%) scale(1.1); text-align: right;}
 
 .galerythumb {font-family: 'noway_roundmedium'; color: #0b59b2; cursor:pointer; line-height: 120%;}
 @-webkit-keyframes spin1 {
@@ -2627,7 +2627,7 @@ width: 65%;}
 }
 
 .galeria {gap: 1rem;}
-.gale01-popup .bts-popup-container {
+.gale01-popup .bts-popup-container, gale02-popup .bts-popup-container {
     margin: 0;
     transform: translate(-64px, 0%) scale(0.6);
 }
@@ -4649,11 +4649,11 @@ border-right-style: solid;*/
 </div>
 
 <div id="cursoRuthinium02">
-<div id="gale01" style="text-align:center;">
+<div id="gale02" style="text-align:center;">
 <div class="galerythumb"><img src="https://images-fe.ssl-images-amazon.com/images/I/81tpQScI-kL._AC_UL210_SR210,210_.jpg" style="margin:0 auto;">Curso Ruthinium 20/10/2023
 </div></div>
 <!-- Start VisualLightBox.com BODY section id=1 -->
-<div class="gale01-popup" role="alert">
+<div class="gale02-popup" role="alert">
 
 <div class="bts-popup-container"><a href="#/" style="font-size: 3rem; text-align: right;" class="close" rel="noopener">×</a>
 <div class="FOLLETO is-visible">
@@ -4872,8 +4872,8 @@ window.onload = setTimeout(function (){
 	}, 3000); 
 	
 //close popup
-	$('.bts-popup, .curso2popup, .gale01-popup').on('click', function(event){
-		if( $(event.target).is('.close') || $(event.target).is('.bts-popup, .curso2popup, .gale01-popup') || $(event.target).is('.cursoleaf')|| $(event.target).is('.bts-popup-container') ) {
+	$('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup').on('click', function(event){
+		if( $(event.target).is('.close') || $(event.target).is('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup') || $(event.target).is('.cursoleaf')|| $(event.target).is('.bts-popup-container') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
 		}
@@ -4881,7 +4881,7 @@ window.onload = setTimeout(function (){
 //close popup when clicking the esc keyboard button
 	$(document).keyup(function(event){
     	if(event.which=='27'){
-    		$('.bts-popup, .curso2popup, .gale01-popup').removeClass('is-visible');
+    		$('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup').removeClass('is-visible');
 	    }
     });
 	
@@ -4901,7 +4901,15 @@ window.onload = setTimeout(function (){
 	
 });
 
-$('#gale01').click(function(e)
+//abrir galeria #gale01
+	$(document).ready(function(){
+    $("#gale02").click(function(){
+        $(".gale02-popup").delay(10).addClass('is-visible');
+    });
+	
+});
+
+$('#gale01, #gale02').click(function(e)
 {
     // Special stuff to do when this link is clicked...
 
