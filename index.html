@@ -2195,6 +2195,10 @@ animation: spin1 0.5s 1 linear;
 .FOLLETO #vlightbox1 {margin:0 auto; background: white;
     padding: 40px 0;border-radius: 8px;}
 	
+.galeria {display: flex;
+    justify-content: center;
+    gap: 4rem;}
+	
 .gale01-popup .bts-popup-container {margin: 0 auto; transform: translateY(20%) scale(1.1); text-align: right;}
 @-webkit-keyframes spin1 {
 0% { -webkit-transform: scale(0.1)}
@@ -2618,6 +2622,12 @@ width: 65%;}
 	.site-content .col-full {
     width: 95%;
     margin: -1rem auto 0;
+}
+
+.galeria {gap: 1rem;}
+.gale01-popup .bts-popup-container {
+    margin: 0;
+    transform: translate(-64px, 0%) scale(0.6);
 }
 }
 @media only screen and (min-width: 984px)
@@ -4607,9 +4617,7 @@ border-right-style: solid;*/
 <section style="margin-bottom:3rem">
 <div class="section-title" style="margin: 2rem 0 2rem 0rem; text-align:center">GALERÍA</div>	
 
-<div style="display: flex;
-    justify-content: center;
-    gap: 4rem;">
+<div class="galeria">
 <div id="cursoRuthinium01">
 <div id="gale01" style="text-align:center;">
 <div style="font-family: 'noway_roundmedium'; color: cornflowerblue; cursor:pointer;"><img src="https://images-fe.ssl-images-amazon.com/images/I/81tpQScI-kL._AC_UL210_SR210,210_.jpg" style="margin:0 auto;">Curso Ruthinium 18/10/2023
