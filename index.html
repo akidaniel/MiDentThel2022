@@ -2193,7 +2193,7 @@ animation: spin1 0.5s 1 linear;
 }
 
 .FOLLETO #vlightbox1, .FOLLETO #vlightbox2 {margin:0 auto; background: white;
-    padding: 15px 0 40px;border-radius: 8px;}
+    padding: 15px 0 40px;border-radius: 8px; transform: translateY(15%);}
 	
 .galeria {display: flex;
     justify-content: center;
@@ -2203,6 +2203,14 @@ animation: spin1 0.5s 1 linear;
 
 .galerythumb {font-family: 'noway_roundmedium'; color: #0b59b2; cursor:pointer; line-height: 120%;}
 #vlb1imageContainer div {display:none!important;}
+
+#galeria .close {
+    font-size: 3rem;
+    text-align: right;
+    position: absolute;
+    top: 4rem;
+    right: -3rem;
+}
 @-webkit-keyframes spin1 {
 0% { -webkit-transform: scale(0.1)}
 100% { -webkit-transform: scale(1)}
@@ -4613,7 +4621,7 @@ border-right-style: solid;*/
 
 
 <!--GALERIA-->
-<section style="margin-bottom:3rem">
+<section id="galeria" style="margin-bottom:3rem">
 <div class="section-title" style="margin: 2rem 0 2rem 0rem; text-align:center">GALERÍA</div>	
 
 <div class="galeria">
@@ -4624,21 +4632,21 @@ border-right-style: solid;*/
 <!-- Start VisualLightBox.com BODY section id=1 -->
 <div class="gale01-popup" role="alert">
 
-<div class="bts-popup-container"><a href="#/" style="font-size: 3rem; text-align: right;" class="close" rel="noopener">×</a>
+<div class="bts-popup-container"><a href="#/" class="close" rel="noopener">×</a>
 <div class="FOLLETO is-visible">
 <div id="vlightbox1"><div>Curso Ruthinium 18/10/2023</div>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-1.jpg" title="Ruthinium 18-10-1"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-01.jpg" alt="Ruth-18-10-1"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-2.jpg" title="Ruthinium 18-10-2"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-02.jpg" alt="Ruth-18-10-2"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-3.jpg" title="Ruthinium 18-10-3"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-03.jpg" alt="Ruth-18-10-3"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-4.jpg" title="Ruthinium 18-10-4"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-04.jpg" alt="Ruth-18-10-4"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-5.jpg" title="Ruthinium 18-10-5"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-05.jpg" alt="Ruth-18-10-5"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-6.jpg" title="Ruthinium 18-10-6"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-06.jpg" alt="Ruth-18-10-6"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-7.jpg" title="Ruthinium 18-10-7"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-07.jpg" alt="Ruth-18-10-7"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-8.jpg" title="Ruthinium 18-10-8"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-08.jpg" alt="Ruth-18-10-8"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-9.jpg" title="Ruthinium 18-10-9"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-09.jpg" alt="Ruth-18-10-9"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-10.jpg" title="Ruthinium 18-10-10"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-10.jpg" alt="Ruth-18-10-10"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-11.jpg" title="Ruthinium 18-10-11"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-11.jpg" alt="Ruth-18-10-11"/></a>
-<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-12.jpg" title="Ruthinium 18-10-12"><img src="galeriarchivos/vlb_thumbnails1/Ruth-18-10-12.jpg" alt="Ruth-18-10-12"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-1.jpg" title="Ruthinium 18-10-1"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-01.jpg" alt="Ruth-18-10-1"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-2.jpg" title="Ruthinium 18-10-2"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-02.jpg" alt="Ruth-18-10-2"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-3.jpg" title="Ruthinium 18-10-3"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-03.jpg" alt="Ruth-18-10-3"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-4.jpg" title="Ruthinium 18-10-4"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-04.jpg" alt="Ruth-18-10-4"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-5.jpg" title="Ruthinium 18-10-5"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-05.jpg" alt="Ruth-18-10-5"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-6.jpg" title="Ruthinium 18-10-6"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-06.jpg" alt="Ruth-18-10-6"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-7.jpg" title="Ruthinium 18-10-7"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-07.jpg" alt="Ruth-18-10-7"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-8.jpg" title="Ruthinium 18-10-8"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-08.jpg" alt="Ruth-18-10-8"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-9.jpg" title="Ruthinium 18-10-9"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-09.jpg" alt="Ruth-18-10-9"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-10.jpg" title="Ruthinium 18-10-10"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-10.jpg" alt="Ruth-18-10-10"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-11.jpg" title="Ruthinium 18-10-11"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-11.jpg" alt="Ruth-18-10-11"/></a>
+<a class="vlightbox1" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-12.jpg" title="Ruthinium 18-10-12"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-12.jpg" alt="Ruth-18-10-12"/></a>
 </div>
 <script src="https://akidaniel.github.io/MiDentThel2022/galeriarchivos/vlb_engine/vlbdata1.js" type="text/javascript"></script>
 </div></div>
@@ -4652,21 +4660,21 @@ border-right-style: solid;*/
 <!-- Start VisualLightBox.com BODY section id=1 -->
 <div class="gale02-popup" role="alert">
 
-<div class="bts-popup-container"><a href="#/" style="font-size: 3rem; text-align: right;" class="close" rel="noopener">×</a>
+<div class="bts-popup-container"><a href="#/" class="close" rel="noopener">×</a>
 <div class="FOLLETO is-visible">
 <div id="vlightbox2"><div>Curso Ruthinium 18/10/2023</div>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-13.jpg" title="Ruthinium-18-10-13"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-13.jpg" alt="Ruth-18-10-13"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-14.jpg" title="Ruthinium-18-10-14"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-14.jpg" alt="Ruth-18-10-14"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-15.jpg" title="Ruthinium-18-10-15"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-15.jpg" alt="Ruth-18-10-15"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-16.jpg" title="Ruthinium-18-10-16"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-16.jpg" alt="Ruth-18-10-16"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-17.jpg" title="Ruthinium-18-10-17"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-17.jpg" alt="Ruth-18-10-17"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-18.jpg" title="Ruthinium-18-10-18"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-18.jpg" alt="Ruth-18-10-18"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-19.jpg" title="Ruthinium-18-10-19"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-19.jpg" alt="Ruth-18-10-19"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-20.jpg" title="Ruthinium-18-10-20"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-20.jpg" alt="Ruth-18-10-20"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-21.jpg" title="Ruthinium-18-10-21"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-21.jpg" alt="Ruth-18-10-21"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-22.jpg" title="Ruthinium-18-10-22"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-22.jpg" alt="Ruth-18-10-22"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-23.jpg" title="Ruthinium-18-10-23"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-23.jpg" alt="Ruth-18-10-23"/></a>
-<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-24.jpg" title="Ruthinium-18-10-24"><img src="galeriarchivos/vlb_thumbnails2/Ruth-18-10-24.jpg" alt="Ruth-18-10-24"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-13.jpg" title="Ruthinium-18-10-13"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-13.jpg" alt="Ruth-18-10-13"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-14.jpg" title="Ruthinium-18-10-14"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-14.jpg" alt="Ruth-18-10-14"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-15.jpg" title="Ruthinium-18-10-15"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-15.jpg" alt="Ruth-18-10-15"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-16.jpg" title="Ruthinium-18-10-16"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-16.jpg" alt="Ruth-18-10-16"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-17.jpg" title="Ruthinium-18-10-17"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-17.jpg" alt="Ruth-18-10-17"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-18.jpg" title="Ruthinium-18-10-18"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-18.jpg" alt="Ruth-18-10-18"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-19.jpg" title="Ruthinium-18-10-19"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-19.jpg" alt="Ruth-18-10-19"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-20.jpg" title="Ruthinium-18-10-20"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-20.jpg" alt="Ruth-18-10-20"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-21.jpg" title="Ruthinium-18-10-21"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-21.jpg" alt="Ruth-18-10-21"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-22.jpg" title="Ruthinium-18-10-22"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-22.jpg" alt="Ruth-18-10-22"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-23.jpg" title="Ruthinium-18-10-23"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-23.jpg" alt="Ruth-18-10-23"/></a>
+<a class="vlightbox2" href="https://dent-thel.com/wp-content/uploads/2023/10/Ruthinium-18-10-24.jpg" title="Ruthinium-18-10-24"><img src="https://dent-thel.com/wp-content/uploads/2023/10/Ruth-18-10-24.jpg" alt="Ruth-18-10-24"/></a>
 
 </div>
 <script src="https://akidaniel.github.io/MiDentThel2022/galeriarchivos/vlb_engine/vlbdata2.js" type="text/javascript"></script>
