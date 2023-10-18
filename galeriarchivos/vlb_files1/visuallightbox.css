@@ -188,13 +188,13 @@
 	background:url(close.png) no-repeat;
 	background-position: 0 0; 
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='close.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/close.png', sizingMethod='scale');
 }
 #vlb1closeLink:hover {
 	background:url(close.png) no-repeat;
 	background-position: 0 100%;
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='close.png', sizingMethod='scale');	
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/close.png', sizingMethod='scale');	
 }   
 
 .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden;}
@@ -239,40 +239,40 @@
 	margin-top: 1px;
 	background-image:url(borderTopLeft.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderTopLeft.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderTopLeft.png', sizingMethod='scale');
 }
 #vlb1outerImageContainer td.tc{
 	background-image:url(borderTopCenter.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderTopCenter.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderTopCenter.png', sizingMethod='scale');
 }
 #vlb1outerImageContainer td.tr{
 	background-image:url(borderTopRight.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderTopRight.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderTopRight.png', sizingMethod='scale');
 }
 #vlb1outerImageContainer td.ml{
 	background-image:url(borderMiddleLeft.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderMiddleLeft.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderMiddleLeft.png', sizingMethod='scale');
 }
 #vlb1outerImageContainer td.mr{
 	background-image:url(borderMiddleRight.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderMiddleRight.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderMiddleRight.png', sizingMethod='scale');
 }
 #vlb1outerImageContainer td.bl{
 	background-image:url(borderBottomLeft.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderBottomLeft.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderBottomLeft.png', sizingMethod='scale');
 }
 #vlb1outerImageContainer td.bc{
 	background-image:url(borderBottomCenter.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderBottomCenter.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderBottomCenter.png', sizingMethod='scale');
 }
 #vlb1outerImageContainer td.br{
 	background-image:url(borderBottomRight.png);
 	_background-image:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='borderBottomRight.png', sizingMethod='scale');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://dent-thel.com/wp-content/uploads/2023/10/borderBottomRight.png', sizingMethod='scale');
 } 
