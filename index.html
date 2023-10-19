@@ -2122,7 +2122,7 @@ padding: 5px 0;
 /*FIN AGENDA*/
 
 /*MODAL POPUP*/
-.bts-popup, .curso2popup, .gale01-popup, .gale02-popup {
+.bts-popup, .curso2popup, .gale01-popup, .gale02-popup, .gale03-popup, .gale04-popup, .gale05-popup {
 position: fixed;
 overflow:auto;
 left: 0;
@@ -2137,7 +2137,7 @@ visibility: hidden;
 transition: opacity 0.3s 0s, visibility 0s 0.3s;
 z-index: 120;
 }
-.bts-popup.is-visible, .curso2popup.is-visible, .gale01-popup.is-visible, .gale02-popup.is-visible {
+.bts-popup.is-visible, .curso2popup.is-visible, .gale01-popup.is-visible, .gale02-popup.is-visible, .gale03-popup.is-visible, .gale04-popup.is-visible, .gale05-popup.is-visible {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 1s 0s, visibility 1s 0s;
@@ -2192,14 +2192,14 @@ top: 28px;
 animation: spin1 0.5s 1 linear;
 }
 
-.FOLLETO #vlightbox1, .FOLLETO #vlightbox2 {margin:0 auto; background: white;
+.FOLLETO #vlightbox1, .FOLLETO #vlightbox2, .FOLLETO #vlightbox3, .FOLLETO #vlightbox4, .FOLLETO #vlightbox5 {margin:0 auto; background: white;
     padding: 15px 0 40px;border-radius: 8px; transform: translateY(15%);}
 	
 .galeria {display: flex;
     justify-content: center;
     gap: 4rem;}
 	
-.gale01-popup .bts-popup-container, .gale02-popup .bts-popup-container {margin: 0 auto; transform: translateY(20%) scale(1.1); text-align: right;}
+.gale01-popup .bts-popup-container, .gale02-popup .bts-popup-container, .gale03-popup .bts-popup-container, .gale04-popup .bts-popup-container, .gale05-popup .bts-popup-container {margin: 0 auto; transform: translateY(20%) scale(1.1); text-align: right;}
 
 .galerythumb {font-family: 'noway_roundmedium'; color: #0b59b2; cursor:pointer; line-height: 120%;}
 #vlb1imageContainer div {display:none!important;}
@@ -2646,7 +2646,7 @@ width: 65%;}
 }
 
 .galeria {gap: 1rem;}
-.gale01-popup .bts-popup-container, .gale02-popup .bts-popup-container {
+.gale01-popup .bts-popup-container, .gale02-popup .bts-popup-container, .gale03-popup .bts-popup-container, .gale04-popup .bts-popup-container, .gale05-popup .bts-popup-container {
     margin: 0;
     transform: translate(-64px, 0%) scale(0.6);
 }
@@ -4893,8 +4893,8 @@ window.onload = setTimeout(function (){
 	}, 3000); 
 	
 //close popup
-	$('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup').on('click', function(event){
-		if( $(event.target).is('.close') || $(event.target).is('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup') || $(event.target).is('.cursoleaf')|| $(event.target).is('.bts-popup-container') ) {
+	$('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup, .gale03-popup, .gale04-popup, .gale05-popup').on('click', function(event){
+		if( $(event.target).is('.close') || $(event.target).is('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup, .gale03-popup, .gale04-popup, .gale05-popup') || $(event.target).is('.cursoleaf')|| $(event.target).is('.bts-popup-container') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
 			$('body').css("overflow", "auto");
@@ -4903,7 +4903,7 @@ window.onload = setTimeout(function (){
 //close popup when clicking the esc keyboard button
 	$(document).keyup(function(event){
     	if(event.which=='27'){
-    		$('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup').removeClass('is-visible');
+    		$('.bts-popup, .curso2popup, .gale01-popup, .gale02-popup, .gale03-popup, .gale04-popup, .gale05-popup').removeClass('is-visible');
 	    }
     });
 	
@@ -4934,7 +4934,34 @@ window.onload = setTimeout(function (){
 	
 });
 
-$('#gale01, #gale02').click(function(e)
+//abrir galeria #gale03
+	$(document).ready(function(){
+    $("#gale03").click(function(){
+        $(".gale03-popup").delay(10).addClass('is-visible');
+		$('body').css("overflow", "hidden");
+
+    });
+	
+});
+//abrir galeria #gale04
+	$(document).ready(function(){
+    $("#gale04").click(function(){
+        $(".gale04-popup").delay(10).addClass('is-visible');
+		$('body').css("overflow", "hidden");
+
+    });
+	
+});
+//abrir galeria #gale05
+	$(document).ready(function(){
+    $("#gale05").click(function(){
+        $(".gale05-popup").delay(10).addClass('is-visible');
+		$('body').css("overflow", "hidden");
+
+    });
+	
+});
+$('#gale01, #gale02, #gale03, #gale04, #gale05').click(function(e)
 {
     // Special stuff to do when this link is clicked...
     // Cancel the default action

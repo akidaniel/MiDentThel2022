@@ -1,8 +1,8 @@
-#vlightbox1, #vlightbox2 {
+#vlightbox1, #vlightbox2, #vlightbox3, #vlightbox4, #vlightbox5 {
 	width:605px;
 	zoom:1;	
 }
-#vlightbox1 .vlightbox1, #vlightbox2 .vlightbox2 {
+#vlightbox1 .vlightbox1, #vlightbox2 .vlightbox2, #vlightbox3 .vlightbox3, #vlightbox4 .vlightbox4, #vlightbox5 .vlightbox5 {
 	display:-moz-inline-stack;
 	display:inline-block;
 	zoom:1;
@@ -19,15 +19,15 @@
 	opacity:0.87;
 	outline:none;
 }
-#vlightbox1 .vlightbox1 a, #vlightbox2 .vlightbox2 a{
+#vlightbox1 .vlightbox1 a, #vlightbox2 .vlightbox2 a, #vlightbox3 .vlightbox3 a, #vlightbox4 .vlightbox4 a, #vlightbox5 .vlightbox5 a {
 	margin:0;
 }
-#vlightbox1 .vlightbox1:hover, #vlightbox1 .vlightbox1 a:hover, #vlightbox2 .vlightbox2:hover, #vlightbox2 .vlightbox2 a:hover{
+#vlightbox1 .vlightbox1:hover, #vlightbox1 .vlightbox1 a:hover, #vlightbox2 .vlightbox2:hover, #vlightbox2 .vlightbox2 a:hover, #vlightbox3 .vlightbox3:hover, #vlightbox3 .vlightbox3 a:hover, #vlightbox4 .vlightbox4:hover, #vlightbox4 .vlightbox4 a:hover, #vlightbox5 .vlightbox5:hover, #vlightbox5 .vlightbox5 a:hover{
 	opacity:1;
 }
-#vlightbox1 .vlightbox1 img, #vlightbox2 .vlightbox2 img{
+#vlightbox1 .vlightbox1 img, #vlightbox2 .vlightbox2 img, #vlightbox3 .vlightbox3 img, #vlightbox4 .vlightbox4 img, #vlightbox5 .vlightbox5 img {
 	display:block;
 	border:none;
 	margin:0;
 }
-#vlightbox1 .vlightbox1 div, #vlightbox2 .vlightbox2 div {display:none}
+#vlightbox1 .vlightbox1 div, #vlightbox2 .vlightbox2 div, #vlightbox3 .vlightbox3 div, #vlightbox4 .vlightbox4 div, #vlightbox5 .vlightbox5 div {display:none}
