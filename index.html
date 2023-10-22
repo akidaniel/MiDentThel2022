@@ -2197,7 +2197,8 @@ animation: spin1 0.5s 1 linear;
 	
 .galeria {display: flex;
     justify-content: center;
-    gap: 4rem;flex-wrap: wrap;}
+    gap: 4rem;flex-wrap: wrap;margin: 2rem 0;
+    text-align: center;}
 	
 .gale01-popup .bts-popup-container, .gale02-popup .bts-popup-container, .gale03-popup .bts-popup-container, .gale04-popup .bts-popup-container, .gale05-popup .bts-popup-container {margin: 0 auto; transform: translateY(20%) scale(1.1); text-align: right;}
 
@@ -2220,6 +2221,27 @@ animation: spin1 0.5s 1 linear;
   visibility: hidden; 
   pointer-events: none;
 }
+
+#cursoRuthinium01, #cursoRuthinium02, #cursoRuthinium03, #cursoRuthinium04, #cursoRuthinium05 {margin-bottom:3rem;}
+
+
+.numerocurso {margin-bottom: -4.5rem;
+    font-size: 2rem;
+    font-family: 'noway_roundbold';
+    color: #ffffff;
+    background: red;
+    width: fit-content;
+    z-index: 45;
+    position: relative;
+padding: 5px 10px 0;
+border-radius: 50px;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+line-height: 100%;
+left: 80%;
+border: 5px solid #000000;}
+
+#cursoRuthinium03 .numerocurso, #cursoRuthinium04 .numerocurso, #cursoRuthinium05 .numerocurso {background: #5869F9;}
 
 @-webkit-keyframes spin1 {
 0% { -webkit-transform: scale(0.1)}
@@ -4637,13 +4659,14 @@ border-right-style: solid;*/
 
 <!--GALERIA-->
 <section id="galeria" style="margin-bottom:3rem">
-<div class="section-title" style="margin: 2rem 0 1rem; text-align:center">GALERÍA</div>	
+<div class="section-title" style="text-align:center; padding: 2rem 0;">GALERÍA</div>	
 
 <div class="galeria">
 <div id="cursoRuthinium01">
-<div id="gale01" style="text-align:center;">
+<div id="gale01" style="text-align:center;"><div class="numerocurso">1</div>
 <div class="galerythumb"><img src="https://dent-thel.com/wp-content/uploads/2023/10/bt_galery.png" style="margin:0 auto;">Taller Ruthinium 18/10/2023
-</div></div>
+</div>
+</div>
 <!-- Start VisualLightBox.com BODY section id=1 -->
 <div class="gale01-popup" role="alert">
 
@@ -4669,7 +4692,7 @@ border-right-style: solid;*/
 </div>
 
 <div id="cursoRuthinium02">
-<div id="gale02" style="text-align:center;">
+<div id="gale02" style="text-align:center;"><div class="numerocurso">2</div>
 <div class="galerythumb"><img src="https://dent-thel.com/wp-content/uploads/2023/10/bt_galery.png" style="margin:0 auto;">Taller Ruthinium 18/10/2023
 </div></div>
 <!-- Start VisualLightBox.com BODY section id=1 -->
@@ -4698,7 +4721,7 @@ border-right-style: solid;*/
 </div>
 
 <div id="cursoRuthinium03">
-<div id="gale03" style="text-align:center;">
+<div id="gale03" style="text-align:center;"><div class="numerocurso">1</div>
 <div class="galerythumb"><img src="https://dent-thel.com/wp-content/uploads/2023/10/bt_galery.png" style="margin:0 auto;">Taller Ruthinium 20/10/2023
 </div></div>
 <!-- Start VisualLightBox.com BODY section id=1 -->
@@ -4726,7 +4749,7 @@ border-right-style: solid;*/
 </div>
 
 <div id="cursoRuthinium04">
-<div id="gale04" style="text-align:center;">
+<div id="gale04" style="text-align:center;"><div class="numerocurso">2</div>
 <div class="galerythumb"><img src="https://dent-thel.com/wp-content/uploads/2023/10/bt_galery.png" style="margin:0 auto;">Taller Ruthinium 20/10/2023
 </div></div>
 <!-- Start VisualLightBox.com BODY section id=1 -->
@@ -4757,7 +4780,7 @@ border-right-style: solid;*/
 </div>
 
 <div id="cursoRuthinium05">
-<div id="gale05" style="text-align:center;">
+<div id="gale05" style="text-align:center;"><div class="numerocurso">3</div>
 <div class="galerythumb"><img src="https://dent-thel.com/wp-content/uploads/2023/10/bt_galery.png" style="margin:0 auto;">Taller Ruthinium 20/10/2023
 </div></div>
 <!-- Start VisualLightBox.com BODY section id=1 -->
