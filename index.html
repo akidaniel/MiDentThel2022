@@ -3170,9 +3170,26 @@ border-right-style: solid;*/
 
 .alertext .close {top:unset; right:unset;}
 
-
-
-
+.xstmas {
+position: absolute;
+top: -30px;
+left: 45%;
+z-index: 999;
+}
+@media only screen and (max-width: 1350px) {
+.xstmas {width: 200px;
+    left: 50%;
+    top: -10px;}
+}
+@media only screen and (max-width: 1100px) {
+.xstmas {left: 42%;}
+}
+@media only screen and (max-width: 940px) {
+.xstmas {width:150px; top: -15px;} 
+}
+@media only screen and (min-width: 768px) and (max-width: 852px) {
+.xstmas {display:none;}
+}
 <!--LOGO SLIDER-->
 .logos .logos__slider, .logo-scrolling .logos .logos__slider {display:flex; justify-content:center; width:100%;}
 .logos .logos__slider.extra-mobile, .logo-scrolling .logos .logos__slider.extra-mobile {display:none}
@@ -4344,7 +4361,9 @@ border-right-style: solid;*/
     <script type="text/javascript">carousel_promo_1_slider_init();</script>
 <!-- #endregion Jssor Slider End -->
 <!--FIN PROMOCAROUSEL 01-->
-
+<!--XSTMAS-->
+<div class="xstmas"><img src="fuente/XSTMAS_2024.gif" alt="Christmas 2023"></div>
+<!--FIN XSTMAS-->
 
 <!--PROMOCAROUSEL 02-->
 <div class="storefront-product-section storefront-best-selling-products" aria-label="Productos más vendidos" ><h2 class="section-title" style="background:#40C0E3;">Ofertas ataches</h2></div>
